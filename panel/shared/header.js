@@ -7,7 +7,7 @@ $('.shared-header')[0].innerHTML =
         </a>
 
         <div class="top-bar-boxed flex items-center">
-            <div style="background: #040417;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" style="padding-right: 10px;">Day Ends In: 01 : 17 : 22</span></div>
+            <div id="countdown" style="background: #040417;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 20px;"><span style="padding-right: 10px;">Day Ends In: 01 : 17 : 22</span></div>
 
             <div style="background: #040417;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 10px;"><span class="my-acc-add">TDH1z...8m6d6</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/700398613230125076/IIWYRzhS_400x400.jpg" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
         </div>
@@ -59,7 +59,31 @@ $('.shared-header')[0].innerHTML =
     </div>
 
 
+<script>
+const DAYS = 24 * 3600 * 1000;
 
+const countdowns = [{
+    id: "countdown",
+    timestamp: new Date("2020-11-01T00:00:00.1000Z").getTime(),
+    interval: 1 * DAYS
+  },
+];
+
+setInterval(() => {
+  const now = new Date().getTime();
+  countdowns.forEach(c => {
+    while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
+    const tSecs = Math.floor((c.timestamp - now) / 1000);
+    const secs = tSecs % 60;
+    const tMins = (tSecs - secs) / 60;
+    const mins = tMins % 60;
+    const tHours = (tMins - mins) / 60;
+    const hours = tHours % 24;
+    const days = (tHours - hours) / 24;
+    document.getElementById(c.id).textContent = `${hours}: ${mins}: ${secs}`;
+  });
+}, 1000);
+</script>
 
 
 
