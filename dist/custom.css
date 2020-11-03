@@ -1,0 +1,139 @@
+﻿.table th {
+    font-weight: 500;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+}
+
+.table td {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: center;
+    width: 1px;
+}
+
+.tb-ds {
+    max-width: 5.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tb-nactive-row {
+    background: #363949;
+}
+.tb-active-row {
+    background: #2c2f3d;
+}
+
+.tb-active-row-2 {
+    background-color: #f7fafc;
+}
+
+.bg-theme-100 {
+    background-color: #8bc34a;
+}
+
+.bg-theme-101 {
+    background-color: #ff5822;
+}
+
+
+body {
+    background: #1e202b;
+}
+
+input {
+    background: #222239;
+    
+}
+
+.input:focus,
+textarea:focus,
+select:focus {
+    outline: none !important;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #5a697c59 !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.stake-btn:hover {
+    width: 98% !important;
+}
+
+.transfer-btn:hover {
+    width: 45% !important;
+}
+
+.box-header {
+    border-bottom: 3px solid #120f2757 !important;
+    background: #3a3e50 !important;
+    border-radius: 9px;
+    box-shadow: 0px 4px 8px #04041747 !important;
+}
+
+.box-body {
+    background: #313443 !important;
+    border-radius: 9px !important;
+}
+
+.row-body {
+    border: 0px !important;
+}
+
+.item-slm {
+    background-color: #363949 !important;
+    color: #5e6a80 !important;
+}
+
+.item-sln {
+    background-color: #3c3f4e !important;
+    color: #44485f !important;
+}
+
+.ro-head {
+    background: #313443 !important;
+    border: 0px !important;
+}
+
+.progress-b {
+    background: #26263c94;
+    height: 7px;
+    border-radius: 50px;
+    margin: 7px 8px 0px 7px;
+    width: 90%;
+}
+
+.progress-bn {
+    height: 7px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(103, 32, 201, 1) 0%, rgba(206, 45, 222, 1) 100%);
+    box-shadow: 0px 0px 8px #8424cdb5
+}
+
+.highchart-credits {
+	
+	background: #2e2e49;
+	color: #2e2e49;
+	
+
+}
+
