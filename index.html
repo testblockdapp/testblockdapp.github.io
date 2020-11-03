@@ -1,1038 +1,614 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>DappHero HTML Generation</title>
 
-    <meta charset="UTF-8" />
-    <meta name="author" content="DappHero" />
-    <meta name="description" content="DappHero" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="E2X Next Generation Staking on the ETHEREUM Blockchain">
+    <meta name="author" content="testblockdapp.github.io E2X Next Generation Staking on the ETHEREUM Blockchain">
+    <link rel="icon" href="img/T2X-logo-s.png">
+    <title>E2X | Next Generation Staking Powered by ETHEREUM</title>
 
-    
-  </head>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link href="css/main.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
 
-  <body>
-    
-    <header>
-      <div>
-        Auction Ends
-        <div id="countdown"></div>
+<body>
+    <!-- start body -->
+
+    <div class="preloader">
+        <!-- start preloader -->
+        <div class="preloader-container">
+            <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
+                        repeatCount="indefinite" begin="0.1" />
+                </circle>
+                <circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
+                        repeatCount="indefinite" begin="0.2" />
+                </circle>
+                <circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                        repeatCount="indefinite" begin="0.3" />
+                </circle>
+            </svg>
+            <span>loading</span>
         </div>
-      <nav>
-        <img
-          alt="Logo"
-          src="//s3.amazonaws.com/appforest_uf/f1604319969471x151591515540869150/CSE.logo.jpg"
-          height="70"
-        />
-        <ul>
-          <li>Menu Item 1</li>
-          <li><a href="#">Menu Item 2</a></li>
-          <li>
-            <a href="#">Dropdown Menu Item</a>
-            <ul>
-              <li><a href="#">Sublink with a long name</a></li>
-              <li><a href="#">Short sublink</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <h1>Community Staking Experiment Test</h1>
-      <p>
-        <mark>
-          Powered by <a href="https://www.dapphero.io">DappHero.io</a>
-        </mark>
-      </p>
-      <p>Community Staking Experiment Test</p>
-      <br />
-      <p>
-        <button data-dh-feature="network" data-dh-property-enable="true">
-          Enable Web3
-        </button>
-      </p>
-    </header>
-    <div>
-      <section><h2>Community Staking Experiment Test</h2></section>
-      <header>
-        <section>
-          <section><h2>Public Methods</h2></section>
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="4jZh"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="allocatedSupply"
-            >
-              <h3>Method <mark>"allocatedSupply"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="4jZh"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
+    </div><!-- end preloader -->
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="4jZh"
-                  >
-                    allocatedSupply
-                  </button>
-                </aside>
-              </section>
+    <div id="coodiv-header" class="d-flex mx-auto flex-column moon-edition">
+        <!-- start header -->
+        <div class="bg_overlay_header">
+            <div id="particles-bg"></div>
+            <img src="img/header/h_bg_02.svg" alt="img-bg">
+            <span class="header-shapes shape-02"></span>
+            <span class="header-shapes shape-03"></span>
+        </div>
+        <!-- Fixed navbar -->
+        <nav id="coodiv-navbar-header" class="navbar navbar-expand-md fixed-header-layout">
+            <div class="container main-header-coodiv-s">
+                <a class="navbar-brand" href="index.html">
+                    <img class="w-logo" src="img/E2X-logo-txt-s.png" alt="" style="max-height: 35px;">
+                </a>
+                <button class="navbar-toggle offcanvas-toggle menu-btn-span-bar ml-auto" data-toggle="offcanvas"
+                    data-target="#offcanvas-menu-home">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#go-to-pt-features">Features</a>
+                        </li>
+
+<li class="nav-item dropdown">
+                            <a class="nav-link" role="button" id="webhosting-megamenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">DApps<span <!--class="nav-new-tag"--></span></a>
+                            <div class="dropdown-menu coodiv-dropdown-header web-menu" aria-labelledby="webhosting-megamenu">
+                            <ul class="web-hosting-menu-header">
+                            <li><i class="fas fa-server"></i> <a href="panel/auction.html">Auction Lobby<span>Get E2X Tokens from the Auction Lobby</span></a></li>
+							<li><i class="fas fa-database"></i> <a href="panel/stake.html">Staking Portal<span>Stake your E2X tokens and start earning E2X + ETH Dividends</span></a></li>
+							<li><i class="fas fa-exchange-alt"></i> <a href="#">XSWAP (Coming Soon)<span>E2X Swap portal with Liquidity Provider Pools</span></a></li>
+							<!--<li><i class="fas fa-gamepad"></i> <a href="games.html">games servers <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							<li><i class="fas fa-cloud"></i> <a href="servers.html">cloud servers <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							<li><i class="fab fa-cpanel"></i> <a href="cpanel.html">cPanel Resellers <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>-->
+							</ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#go-to-pt-faq">FAQ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#go-to-pt-roadmap">Roadmap</a>
+                        </li>
+
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="#go-to-pt-contactus">Exchanges</a>
+                        </li>-->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">Litepaper</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <ul class="header-user-info-coodiv">
+                    <button data-toggle="tooltip" title="" id="search-btn2" onclick="window.location.href='https://testblockdapp.github.io/panel/auction.html'"
+                    style="width: 150px;height: 4vh;border: 1px solid #818ed7; background-image:linear-gradient(to right,#818ed7,#96d2dd); border-radius:50px;"><span
+                        style="font-weight: 800;font-size: 15px; color:white ">Get E2X Tokens</span>
+                </button>                        <!-- user header dropdown 
+                        <div class="dropdown-menu coodiv-dropdown-header user-login-dropdown"
+                            aria-labelledby="header-login-dropdown">
+                            <form class="user-login-dropdown-form" action="signin.html" data-form="validate">
+                                <div class="form-group username">
+                                    <input type="email" name="username" placeholder="Your Email" class="form-control">
+                                    <i class="fas fa-at"></i>
+                                </div>
+
+                                <div class="form-group password">
+                                    <input type="password" name="password" placeholder="Password" class="form-control">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+
+                                <button data-toggle="tooltip" data-placement="left" title="login"
+                                    class="user-login-dropdown-form-button" type="submit"><i
+                                        class="fas fa-angle-right"></i></button>
+
+                            </form>
+                        </div>
+                        <!-- end user header dropdown -->
+                    
+                </ul>
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="r3BO"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="allowance"
-            >
-              <h3>Method <mark>"allowance"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>owner</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="r3BO"
-                      data-dh-property-input-name="owner"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>spender</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="r3BO"
-                      data-dh-property-input-name="spender"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="r3BO"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
+        </nav>
+        <div class="mt-auto header-top-height">
+        </div>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="r3BO"
-                  >
-                    allowance
-                  </button>
-                </aside>
-              </section>
+        <div style="">
+            <a href="https://discord.gg/YMpcptT" target="_blank"><img class="sm-btn" src="img/sm-discord.png"></a>
+            <a href="https://t.me/T2Xtoken" target="_blank"><img class="sm-btn" src="img/sm-telegram.png"></a>
+            <a href="https://twitter.com/t2xtoken" target="_blank"><img class="sm-btn" src="img/sm-twitter.png"></a>
+        </div>
+
+        <div style="text-align: center; padding-top: 30px;">
+            <img class="logo-lg floating" src="img/E2X-logo-lg.png"
+                style="width: 200px;">
+                <!-- filter: drop-shadow(0px 0px 20px  rgba(253, 130, 93, 0.44)); -->
+        </div>
+
+        <div id="domain-search-header" class=""
+            style="position: relative;text-align: center;width: 100%;padding-top: 500px;">
+
+            <div class="inline-button-domain-order"
+                style="right: 0px;border-radius: 50px;width: 100%;margin-top: 10px;">
+                <h4 class="mt-3 main-header-text-title"><span>Powered by ETHEREUM</span>
+                    Next Generation Staking</h4>
+              <!--  <button data-toggle="tooltip" data-placement="left" title="" id="transfer-btn" onclick="window.location.href='#'"
+                    style="width: 230px;height: 5.5vh;border: 3px solid #ffffff3d;"><span
+                        style="margin-top: -3px;display: block;font-weight: 800;font-size: 15px;">Trade E2X</span>
+                </button> -->
+                
+                <button data-toggle="tooltip" data-placement="left" title="" id="search-btn" onclick="window.location.href='https://testblockdapp.github.io/panel/stake.html'"
+                    style="width: 230px;height: 5.5vh;border: 3px solid #ffffff3d;"><span
+                        style="margin-top: -3px;display: block;font-weight: 800;font-size: 15px; ">E2X Staking Portal</span>
+                </button> <br>
+
+                
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="3dCh"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="balanceOf"
-            >
-              <h3>Method <mark>"balanceOf"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>account</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="3dCh"
-                      data-dh-property-input-name="account"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="3dCh"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="3dCh"
-                  >
-                    balanceOf
-                  </button>
-                </aside>
-              </section>
+        </div>
+
+
+        <div class="mt-auto"></div>
+    </div><!-- end header -->
+
+
+
+<div>
+
+</div>
+
+
+
+
+    <section id="go-to-pt-features">
+        <div class="container">
+            <div class="row justify-content-start futures-version-2">
+                <div class="col-md-4">
+                    <div class="futures-version-2-box box-c-1">
+                        <i class="bredhicon-share"></i>
+                        <h5>Daily Auction Lobby</h5>
+                        <p style="height: 110px;">Our Daily Auctions will start from 5 million E2X tokens per day and will be distributed between
+                            the users that participated in Auction based on their purchase amount. This will reduce over the next 365 days.
+                        </p>
+                        <div class="text-right">
+                            <a class="more-btn" href="panel/auction.html">See more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="futures-version-2-box box-c-1">
+                        <i class="fas fa-chart-pie" style="height: 59.68px;"></i>
+                        <h5>Daily ETHEREUM Dividends</h5>
+                        <p style="height: 110px;">Everyday 90% of the previous day's ETH that was spent in the Auction Lobby will be pooled and allocated to users based upon their completed stake terms. 10% will be converted to TRX and used to buy into T2X lobbies.</p>
+                        <div class="text-right">
+                            <a class="more-btn" href="panel/dividends.html">See more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="futures-version-2-box box-c-1">
+                        <i class="fas fa-clock" style="height: 59.68px;"></i>
+                        <h5>Lucrative Staking System</h5>
+                        <p style="height: 110px;">Stake your E2X tokens within the Staking Portal and earn daily interest. Additionally Stakers are rewarded ETH tokens from the daily Lobbies based off the percentage of total tokens being Staked.</p>
+                        <div class="text-right">
+                            <a class="more-btn" href="panel/stake.html">See more</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+
+
+    <section class="section-wth-amwaj">
+        <div class="bg_overlay_section-amwaj">
+            <img src="img/bg/b_bg_02.jpg" alt="img-bg">
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-between mr-tp-50">
+
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title">What is E2X all about?</h2>
+                    <p class="side-text-right-text">
+                        E2X was developed and optimized to reward those who participate in the platform. Derived from the ideas behind previous staking platforms, E2X takes it to the next level giving back 90% of all
+                        ETH tokens that enter the daily Lobby Auctions. Easily making E2X one of the most lucritive staking platforms available!
+                        <br>
+                        <br>E2X was designed for speed. No more waiting for your transactions to confirm. No more paying high cost 
+                        transaction fees. E2X ends this putting more rewards back in your pocket.
+                        <p>
+                            <a class="side-text-right-button" href="panel/auction.html">Swap ETH for E2X tokens</a>
+                </div>
+
+                <div class="col-md-5">
+
+                    <div class="display-on-hover-box-container">
+                        <a href="#tab1" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/quality-badge.svg" alt="" />
+                        </a>
+                        <a href="#tab2" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/inclined-rocket.svg" alt="" />
+                        </a>
+                        <a href="#tab3" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/public-speech.svg" alt="" />
+                        </a>
+                        <a href="#tab4" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/big-light.svg" alt="" />
+                        </a>
+                        <a href="#tab5" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/big-lifesaver.svg" alt="" />
+                        </a>
+                        <a href="#tab6" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/headphones-with-thin-mic.svg" alt="" />
+                        </a>
+                        <a href="#tab7" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/inclined-paper-plane.svg" alt="" />
+                        </a>
+                        <a href="#tab8" class="display-on-hover-box-items">
+                            <img src="img/svgs/hover-box/big-telephone.svg" alt="" />
+                        </a>
+
+                        <div class="display-on-hover-box-content">
+                            <div class="display-on-hover-box-cotent-items">
+                                <div id="tab1" class="tab-content-hover">
+                                    <h5>Innovative Blockchain</h5>
+                                    <p>The E2X core is powered by ETHEREUM, an award winning blockchain development platform.</p>
+                                </div>
+                                <div id="tab2" class="tab-content-hover">
+                                    <h5>Lightning Fast</h5>
+                                    <p>E2X transactions typically confirm in 10 seconds or less.</p>
+                                </div>
+                                <div id="tab3" class="tab-content-hover">
+                                    <h5>Referral System</h5>
+                                    <p>Your referrals will earn an extra 5% minted E2X tokens on their Stake End. As a referrer you will earn an extra 10%.</p>
+                                </div>
+                                <div id="tab4" class="tab-content-hover">
+                                    <h5>Innovative Ideas</h5>
+                                    <p>Hard working developers are behind the E2X project. Providing both new and innovative enhancements to the E2X platform.</p>
+                                </div>
+                                <div id="tab5" class="tab-content-hover">
+                                    <h5>Secure</h5>
+                                    <p>Our smart contracts are open source and made available for everyone. Rest assured you can trust your funds are safe when entering any of our smart contact dapps.</p>
+                                </div>
+                                <div id="tab6" class="tab-content-hover">
+                                    <h5>Open & Transparent</h5>
+                                    <p>Community backed and driven, the admins of the project are here to answer and resolve any issues faced by users.</p>
+                                </div>
+                                <div id="tab7" class="tab-content-hover">
+                                    <h5>Social Media</h5>
+                                    <p>Get all the latest updates and connect with other active members of the community using Telegram and Discord.</p>
+                                </div>
+                                <div id="tab8" class="tab-content-hover">
+                                    <h5>Mobile Optimized</h5>
+                                    <p>On the go? The E2X platform is optimized for mobile use. Trade, Stake, and Play games all from your smart device.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+
+
+
+    <section class="padding-100-0-50 position-relative">
+        <div class="container">
+        <h5 class="title-default-coodiv-two">Simple & Powerful tools<span class="mr-tp-10">Our Staking Dapp makes it easy to start earning E2X + ETH Dividends</span></h5>
+
+        
+        
+<p align="center"><img src="img/SPOILER_asdasd.png" width="900"></p>
+
+            <div class="button-row text-center">
+                <a class="btn jango-color-btn" href="panel/stake.html">Enter Staking Lobby</a>
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="PRYX"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="currentDay"
-            >
-              <h3>Method <mark>"currentDay"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="PRYX"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="PRYX"
-                  >
-                    currentDay
-                  </button>
-                </aside>
-              </section>
+        </div>
+    </section>
+
+   
+
+
+    <section class="padding-100-0 with-top-border" id="go-to-pt-faq">
+        <div class="container">
+            <h5 class="title-default-coodiv-two">Frequently asked questions.</h5>
+
+            <div class="row justify-content-center mr-tp-40">
+                <div class="col-md-9">
+
+                    <div class="accordion" id="frequently-questions">
+
+                        <div class="questions-box">
+                            <div id="headingOne">
+                                <button class="btn questions-title" type="button" data-toggle="collapse"
+                                    data-target="#questionone" aria-expanded="true" aria-controls="questionone">
+                                    What is E2X?
+                                </button>
+                            </div>
+
+                            <div id="questionone" class="collapse show questions-reponse" aria-labelledby="headingOne"
+                                data-parent="#frequently-questions">
+                                E2X is a highly lucritive Staking DApp platform. Developed from the ideas behind previous staking platforms, E2X was designed with one thing in mind, the STAKERS. By owning E2X tokens and 
+                                Staking them in our Staking Portal users will receive daily interest on their E2X tokens as well as a percentage of the overall amount of ETH that enters the Auction Lobby daily. Fully transparent 
+                                and secure everything is controlled by smart contracts on the ETHEREUM blockchain. There is no MAX supply and token price is soley derived from buying and selling markets.
+                            </div>
+                        </div>
+
+                        <div class="questions-box">
+                            <div id="headingtwo">
+                                <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
+                                    data-target="#questiontwo" aria-expanded="true" aria-controls="questiontwo">
+                                    How can I get E2X tokens?
+                                </button>
+                            </div>
+
+                            <div id="questiontwo" class="collapse questions-reponse" aria-labelledby="headingtwo"
+                                data-parent="#frequently-questions">
+                                E2X tokens are available for <a href="panel/auction.html">Auction</a> in our Staking Portal Auction Lobby or on exchanges when listings available. 
+                            </div>
+                        </div>
+
+                      <div class="questions-box">
+                            <div id="headingtree">
+                                <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
+                                    data-target="#questiontree" aria-expanded="true" aria-controls="questiontree">
+                                    How can I earn from E2X?
+                                </button>
+                            </div>
+
+                            <div id="questiontree" class="collapse questions-reponse" aria-labelledby="headingtree"
+                                data-parent="#frequently-questions">
+                                By Staking your E2X tokens you start recieving daily interest. In addition to daily interest, Stakers are also rewarded with 90% of all ETH 
+                                that enters the daily Auction Lobby. E2X will become tradeable on multiple exchanges as continue development of additional smart contract games designed 
+                                to fuel the E2X Stakers.
+ 
+                            </div>
+                        </div>
+                        
+                                              <div class="questions-box">
+                            <div id="headingfour">
+                                <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
+                                    data-target="#questionfour" aria-expanded="true" aria-controls="questionfour">
+                                    How do I Stake my E2X tokens?
+                                </button>
+                            </div>
+
+                            <div id="questionfour" class="collapse questions-reponse" aria-labelledby="headingfour"
+                                data-parent="#frequently-questions">
+                                Staking is ONLY available in our <a href="#">Staking Portal</a> dapp.<br><br>
+                                
+                                <b>Can I have Multiple Stakes?</b> YES <br>
+                                <b>Can I end my Stake early?</b> YES <br>
+                                <b>Am I penalized for ending Stakes early?</b> YES! You are subject up to a 100% penalty depending on your stake terms.<br>                                
+                                <b>Can I modify my Stake once started?</b> NO <br>
+                                <b>What is Staking Minimum and Maximum duration?</b> 1 Day - 365 Days <br>
+                                <b>Maximum number of tokens I can Stake?</b> No Maximum <br>
+                                <b>What do I do when my Stake duration ends?</b> Complete steps by executing the End Stake function. After a 2 week period 
+                                of not claiming your Ended Stakes you will be charged 1% each week that passes.<br>
+                                 
+                            </div>
+                        </div>
+                        
+
+                 <div class="questions-box">
+                            <div id="headingfive">
+                                <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
+                                    data-target="#questionfive" aria-expanded="true" aria-controls="questionfive">
+                                    What else can I do with my E2X tokens?
+                                </button>
+                            </div>
+
+                            <div id="questionfive" class="collapse questions-reponse" aria-labelledby="headingfive"
+                                data-parent="#frequently-questions">
+                                Initially Staking will be the main focus of the platform. Shortly after we will begin development of 
+                                smart contract DApps and Games utlizing E2X tokens.
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="aZYg"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="dailyData"
-            >
-              <h3>Method <mark>"dailyData"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>anonymous input</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="aZYg"
-                      data-dh-property-input-name="[0]"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="aZYg"
-                    data-dh-property-output-name="dayPayoutTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="aZYg"
-                    data-dh-property-output-name="dayDividends"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="aZYg"
-                    data-dh-property-output-name="dayStakeSharesTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="aZYg"
-                  >
-                    dailyData
-                  </button>
-                </aside>
-              </section>
+        </div>
+    </section>
+
+
+
+<section class="perlex-efect-section parallax-window padding-100-0 position-relative" data-parallax="scroll" data-image-src="img/SPOILER_asdasd.png">
+        <!-- start parallax section -->
+        <h6 class="d-none">video section</h6>
+        <span class="perlex-hidden-iverlow"></span>
+        <a class="play-button-in-section video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/3UigZD-Uilc" data-target="#videomodal" href="https://www.youtube.com/embed/3UigZD-Uilc">
+            <i class="fas fa-play"></i>
+            <span class="waves wave-1"></span>
+            <span class="waves wave-2"></span>
+            <span class="waves wave-3"></span>
+            <span class="waves wave-4"></span>
+        </a>
+    </section>
+
+
+
+
+
+
+    <section class="padding-100-0 position-relative how-it-work-section" id="go-to-pt-roadmap">
+        <div class="container">
+            <h5 class="title-default-coodiv-two">Roadmap<span>E2X Future Developements</span></h5>
+            <div class="row justify-content-center how-it-work-section-row" style="margin-top: 0px !important;">
+                <div class="col-md-4">
+                    <div class="how-it-works-box">
+                        <i class="h-flaticon-001-bug-1"></i>
+                        <h5>Staking & Dividend Platform Developments</h5>
+                        <p>Developed to reward participants, we offer a fully developed Staking platform that includes features such as a 90% Dividend Structure and weekly paydays.  </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="how-it-works-box">
+                        <i class="h-flaticon-036-globe-1"></i>
+                        <h5>Revenue Sharing Swap Portal</h5>
+                        <p>E2X will offer its own internal revenue sharing swap portal called XSWAP. With features including liquidity provider rewards, drip dividend structure, and E2X token buy back and burns. <b></b>  </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="how-it-works-box">
+                        <i class="h-flaticon-008-upload"></i>
+                        <h5>Smart Contract Developments</h5>
+                        <p>E2X offers fast transactions. Open sourced smart contract games and dapps will be added increasing the tokens useability.  </p>
+                    </div>
+                </div>
+
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="XLU0"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="dailyDataRange"
-            >
-              <h3>Method <mark>"dailyDataRange"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>beginDay</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="XLU0"
-                      data-dh-property-input-name="beginDay"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>endDay</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="XLU0"
-                      data-dh-property-input-name="endDay"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="XLU0"
-                    data-dh-property-output-name="_dayStakeSharesTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="XLU0"
-                    data-dh-property-output-name="_dayPayoutTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="XLU0"
-                    data-dh-property-output-name="_dayDividends"
-                  >
-                    <pre>Output...</pre>
-                  </div>
+        </div>
+    </section>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="XLU0"
-                  >
-                    dailyDataRange
-                  </button>
-                </aside>
-              </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-12">
+					<!--<center><a href="#"><img src="img/oikos-logo.svg" height="35px"></a></center>-->
+                </div>
+
+                                    <div class="mt-auto"></div>
+                </div>
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="MNtX"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="decimals"
-            >
-              <h3>Method <mark>"decimals"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="MNtX"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
+        </div>
+    </section>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="MNtX"
-                  >
-                    decimals
-                  </button>
-                </aside>
-              </section>
+    <section class="footer-section" id="go-to-pt-contactus">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 quiq-links-footer">
+                    <h5 class="quiq-links-footer-title">Quick Links</h5>
+                    <div class="row">
+                        <ul class="col-md-6 quiq-links-footer-ul">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#go-to-pt-features">Features</a></li>
+                            <li><a href="#go-to-pt-faq"">FAQ</a></li>
+                            <li><a href="#go-to-pt-roadmap"">Roadmap</a></li>
+                            <li><a href="#go-to-pt-contactus"">Exchanges</a></li>
+                        </ul>
+
+
+                        <ul class="col-md-6 quiq-links-footer-ul">
+                            <li><a href="panel/transfer.html">Transfer</a></li>
+                            <li><a href="panel/stake.html">Stake</a></li>
+                            <li><a href="panel/auction.html">Auction</a></li>
+                            <li><a href="panel/dividends.html">Dividends</a></li>
+                            <li><a href="panel/refer.html">Referral</a></li>
+                                                   </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="quiq-links-footer-title">Verified & Secure Smart Contracts</h5>
+                    <p class="secure-img-footer-area">
+                        <img src="img/footer/secure.png" alt="" />
+                        
+                    </p>
+
+                                    </div>
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="44G7"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="globalInfo"
-            >
-              <h3>Method <mark>"globalInfo"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="44G7"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="44G7"
-                  >
-                    globalInfo
-                  </button>
-                </aside>
-              </section>
+            <div class="mr-tp-40 row justify-content-between footer-area-under">
+                <div class="col-md-4">
+                    <img class="w-logo" src="img/E2X-logo-txt-s.png" alt="" style="max-height: 35px;">
+                                   </div>
+
+
             </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="6dCT"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="globals"
-            >
-              <h3>Method <mark>"globals"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="lockedSunsTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="nextStakeSharesTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="shareRate"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="stakePenaltyTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="dailyDataCount"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="stakeSharesTotal"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="6dCT"
-                    data-dh-property-output-name="latestStakeId"
-                  >
-                    <pre>Output...</pre>
-                  </div>
+            <div class="row justify-content-between final-footer-area mr-tp-40">
+                <div class="final-footer-area-text">
+                    © Copyright 2020 testblockdapp.github.io
+                            </div>
+        </div>
+    </section>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="6dCT"
-                  >
-                    globals
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="JSCu"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="name"
-            >
-              <h3>Method <mark>"name"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="JSCu"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- template JavaScript -->
+    <script src="js/template-scripts.js"></script>
+    <!-- flickity JavaScript -->
+    <script src="js/flickity.pkgd.min.js"></script>
+    <!-- carousel JavaScript -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <!-- parallax JavaScript -->
+    <script src="js/parallax.min.js"></script>
+    <!-- mailchamp JavaScript -->
+    <script src="js/mailchamp.js"></script>
+    <!-- mailchamp JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- bootstrap offcanvas -->
+    <script src="js/bootstrap.offcanvas.min.js"></script>
+    <!-- touchSwipe JavaScript -->
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <!-- seconde style additionel JavaScript -->
+    <script src="js/particles-code.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/smoothscroll.js"></script>
+</body>
 
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="JSCu"
-                  >
-                    name
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="oxtu"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="stakeLists"
-            >
-              <h3>Method <mark>"stakeLists"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>anonymous input</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="oxtu"
-                      data-dh-property-input-name="[0]"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>anonymous input</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="oxtu"
-                      data-dh-property-input-name="[1]"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="oxtu"
-                    data-dh-property-output-name="stakeId"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="oxtu"
-                    data-dh-property-output-name="stakedSuns"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="oxtu"
-                    data-dh-property-output-name="stakeShares"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="oxtu"
-                    data-dh-property-output-name="lockedDay"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="oxtu"
-                    data-dh-property-output-name="stakedDays"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="oxtu"
-                    data-dh-property-output-name="unlockedDay"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="oxtu"
-                  >
-                    stakeLists
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="3AsF"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="symbol"
-            >
-              <h3>Method <mark>"symbol"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="3AsF"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="3AsF"
-                  >
-                    symbol
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="iHRl"
-              data-dh-property-auto-invoke="true"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="totalSupply"
-            >
-              <h3>Method <mark>"totalSupply"</mark></h3>
-              <section>
-                <aside>
-                  <div
-                    data-dh-property-method-id="iHRl"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="iHRl"
-                  >
-                    totalSupply
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="uvMh"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="xfLobby"
-            >
-              <h3>Method <mark>"xfLobby"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>anonymous input</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="uvMh"
-                      data-dh-property-input-name="[0]"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="uvMh"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="uvMh"
-                  >
-                    xfLobby
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="YO2s"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="xfLobbyMembers"
-            >
-              <h3>Method <mark>"xfLobbyMembers"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>anonymous input</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="YO2s"
-                      data-dh-property-input-name="[0]"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>anonymous input</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="YO2s"
-                      data-dh-property-input-name="[1]"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="YO2s"
-                    data-dh-property-output-name="headIndex"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-                  <div
-                    data-dh-property-method-id="YO2s"
-                    data-dh-property-output-name="tailIndex"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="YO2s"
-                  >
-                    xfLobbyMembers
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-        </section>
-      </header>
-      <header>
-        <section>
-          <section><h2>Transaction Methods</h2></section>
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="npHL"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="approve"
-            >
-              <h3>Method <mark>"approve"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>spender</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="npHL"
-                      data-dh-property-input-name="spender"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>amount</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="npHL"
-                      data-dh-property-input-name="amount"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="npHL"
-                    data-dh-property-outputs="true"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="npHL"
-                  >
-                    approve
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="Lzy0"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="dailyDataUpdate"
-            >
-              <h3>Method <mark>"dailyDataUpdate"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>beforeDay</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="Lzy0"
-                      data-dh-property-input-name="beforeDay"
-                    />
-                  </section>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="Lzy0"
-                  >
-                    dailyDataUpdate
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="8ODs"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="decreaseAllowance"
-            >
-              <h3>Method <mark>"decreaseAllowance"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>spender</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="8ODs"
-                      data-dh-property-input-name="spender"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>subtractedValue</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="8ODs"
-                      data-dh-property-input-name="subtractedValue"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="8ODs"
-                    data-dh-property-outputs="true"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="8ODs"
-                  >
-                    decreaseAllowance
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="zshU"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="increaseAllowance"
-            >
-              <h3>Method <mark>"increaseAllowance"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>spender</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="zshU"
-                      data-dh-property-input-name="spender"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>addedValue</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="zshU"
-                      data-dh-property-input-name="addedValue"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="zshU"
-                    data-dh-property-outputs="true"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="zshU"
-                  >
-                    increaseAllowance
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="BMRn"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="transfer"
-            >
-              <h3>Method <mark>"transfer"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>recipient</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="BMRn"
-                      data-dh-property-input-name="recipient"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>amount</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="BMRn"
-                      data-dh-property-input-name="amount"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="BMRn"
-                    data-dh-property-outputs="true"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="BMRn"
-                  >
-                    transfer
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-          ,
-          <header>
-            <div
-              data-dh-feature="customContract"
-              data-dh-property-method-id="Fmmw"
-              data-dh-property-auto-invoke="false"
-              data-dh-property-contract-name="Community Staking Experiment Test"
-              data-dh-property-method-name="transferFrom"
-            >
-              <h3>Method <mark>"transferFrom"</mark></h3>
-              <section>
-                <aside>
-                  <section>
-                    Input name: <i>sender</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="Fmmw"
-                      data-dh-property-input-name="sender"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>recipient</i>
-                    <input
-                      type="text"
-                      placeholder="address"
-                      data-dh-property-method-id="Fmmw"
-                      data-dh-property-input-name="recipient"
-                    />
-                  </section>
-                  <section>
-                    Input name: <i>amount</i>
-                    <input
-                      type="text"
-                      placeholder="uint256"
-                      data-dh-property-method-id="Fmmw"
-                      data-dh-property-input-name="amount"
-                    />
-                  </section>
-                  <div
-                    data-dh-property-method-id="Fmmw"
-                    data-dh-property-outputs="true"
-                    data-dh-property-outputs="true"
-                  >
-                    <pre>Output...</pre>
-                  </div>
-
-                  <button
-                    data-dh-property-invoke="true"
-                    data-dh-property-method-id="Fmmw"
-                  >
-                    transferFrom
-                  </button>
-                </aside>
-              </section>
-            </div>
-          </header>
-        </section>
-      </header>
-    </div>
-    <script
-      id="dh-apiKey"
-      data-api="1604319862194x869524834168078300"
-      src="https://package.dapphero.io/main.js"
-    ></script>
-    <style>
-      form {
-        margin: 40px;
-      }
-    </style>
-
-    <script>
-      document.addEventListener(
-        "dappHeroConfigLoaded",
-        ({ detail: dappHero }) => {
-          // Inside here you can listen to any event you want
-          console.log("DappHero Has Loaded!");
-
-          // For projects with auto-invoked method, you will want to filter on events
-          // dappHero.listenToTransactionStatusChange(data => {
-          //   console.log("Listening to transtaction status change", data);
-          // });
-
-          // This is how you can listen to any events your smart contract emits
-          dappHero.listenToSmartContractBlockchainEvent((data) => {
-            console.log("The blockChain Events: ", data);
-          });
-
-          //This is an example method for alerting your users they are on the wrong network
-          //if(window.dappHero.provider.chainId !== 3){
-          //  alert("Wrong network! You should be on 3")
-          //}
-        }
-      );
-const DAYS = 24 * 3600 * 1000;
-
-const countdowns = [{
-    id: "countdown",
-    timestamp: new Date("2020-11-01T00:00:00.1000Z").getTime(),
-    interval: 1 * DAYS
-  },
-];
-
-setInterval(() => {
-  const now = new Date().getTime();
-  countdowns.forEach(c => {
-    while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
-    const tSecs = Math.floor((c.timestamp - now) / 1000);
-    const secs = tSecs % 60;
-    const tMins = (tSecs - secs) / 60;
-    const mins = tMins % 60;
-    const tHours = (tMins - mins) / 60;
-    const hours = tHours % 24;
-    const days = (tHours - hours) / 24;
-    document.getElementById(c.id).textContent = `${hours}: ${mins}: ${secs}`;
-  });
-}, 1000);
-      
-    </script>x
-    
-  </body>
 </html>
