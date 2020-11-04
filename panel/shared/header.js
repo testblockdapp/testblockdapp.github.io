@@ -72,7 +72,7 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <a href="" class="-intro-x hidden md:flex">
-            <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSElogo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
+            <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSELogo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #07d662;">CSEth</span>
         </a>
         <!-- END: Logo -->
