@@ -37,7 +37,7 @@ function run_Stake(nIrstRn) {
         $('.st-val-1')[0].innerHTML = currentDay + 1
 
         stakeData.shareRate = (100000 / stakeData.stakingShare) * 100000000
-        $('.st-val-12')[0].innerHTML = abbreviate_number(stakeData.shareRate, 2) + "/E2X"
+        $('.st-val-12')[0].innerHTML = abbreviate_number(stakeData.shareRate, 2) + "/CSE"
     })
 
     mainContract.methods.xfLobby(currentDay).call({
@@ -95,7 +95,7 @@ function stakeChangeDays() {
     holder = abbreviate_number_cu1((stakeData.clc_1 * parseFloat($('.stake-inp-amount')[0].value)).toLocaleString(void 0, {
         minimumFractionDigits: 8
     }))
-    $('.st-val-5')[0].innerHTML = "+ " + holder + " E2X"
+    $('.st-val-5')[0].innerHTML = "+ " + holder + " CSE"
 
     calculator()
 }
@@ -108,12 +108,12 @@ function stakeChangeAmount() {
     holder = abbreviate_number_cu1((stakeData.clc_2).toLocaleString(void 0, {
         minimumFractionDigits: 8
     }))
-    $('.st-val-4')[0].innerHTML = "+ " + holder + " E2X"
+    $('.st-val-4')[0].innerHTML = "+ " + holder + " CSE"
 
     holder = abbreviate_number_cu1((stakeData.clc_1 * parseFloat($('.stake-inp-amount')[0].value)).toLocaleString(void 0, {
         minimumFractionDigits: 8
     }))
-    $('.st-val-5')[0].innerHTML = "+ " + holder + " E2X"
+    $('.st-val-5')[0].innerHTML = "+ " + holder + " CSE"
 
     calculator()
 }
@@ -123,11 +123,11 @@ function calculator() {
     if (!currentDay) return
 
     holder = abbreviate_number(stakeData.clc_1 * parseFloat($('.stake-inp-amount')[0].value) + stakeData.clc_2, 2)
-    $('.st-val-6')[0].innerHTML = holder + " E2X"
+    $('.st-val-6')[0].innerHTML = holder + " CSE"
 
     let effective = parseFloat($('.stake-inp-amount')[0].value) + (stakeData.clc_1 * parseFloat($('.stake-inp-amount')[0].value) + stakeData.clc_2)
     holder = abbreviate_number(effective, 2)
-    $('.st-val-7')[0].innerHTML = holder + " E2X"
+    $('.st-val-7')[0].innerHTML = holder + " CSE"
 
     $('.st-val-13')[0].innerHTML = abbreviate_number(parseFloat(effective * stakeData.shareRate), 2)
 }
@@ -148,7 +148,7 @@ function doStake() {
                 from: user.address,
                 shouldPollResponse: false
             }).then(res => {
-                displayAlert(1, `Successfully staked ${parseFloat($('.stake-inp-amount')[0].value)} E2X for ${parseInt($('.stake-inp-day')[0].value)} days.`)
+                displayAlert(1, `Successfully staked ${parseFloat($('.stake-inp-amount')[0].value)} CSE for ${parseInt($('.stake-inp-day')[0].value)} days.`)
                 refreshMyStakes()
             }).catch(err => {
                 displayAlert(3, "Something went wrong !")
@@ -416,12 +416,12 @@ function calcInterest(item, item2, item3, stakeShares, startDay, endDay) {
         $(`.${item}`)[0].innerHTML = `${abbreviate_number(interest, 2)}`
         
         if ($(`.${item2}`)[0].id && $(`.${item3}`)[0].id) $(`.${item2}`)[0].innerHTML = `${abbreviate_number(parseFloat($(`.${item2}`)[0].id) + parseFloat($(`.${item3}`)[0].id) + interest, 2)}`
-        // $(`.${item3}`)[0].innerHTML = `${abbreviate_number(parseFloat($(`.${item2}`)[0].id) + parseFloat($(`.${item3}`)[0].id) + interest / 100, 2)} E2X`
+        // $(`.${item3}`)[0].innerHTML = `${abbreviate_number(parseFloat($(`.${item2}`)[0].id) + parseFloat($(`.${item3}`)[0].id) + interest / 100, 2)} CSE`
     }, 3000)
 }
 
 
-//a.slice(0, a.indexOf(" E2X"))
+//a.slice(0, a.indexOf(" CSE"))
 function addUpCurrentValue() {
     $('.interest-tm-${ii}')
 }
@@ -528,7 +528,7 @@ function renderMyEndedStakes(data) {console.log("e", data)
 
                     <div class="w-64 sm:w-auto truncate"
                         style="width: 150vw; text-align:center; font-weight: 900;">
-                        <span class="inbox__item--highlight">${abbreviate_number(item.stakedSuns / DESI, 2)} E2X</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(item.stakedSuns / DESI, 2)} CSE</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
@@ -538,7 +538,7 @@ function renderMyEndedStakes(data) {console.log("e", data)
 
                     <div class="w-64 sm:w-auto truncate"
                         style="width: 210vw; text-align:center; font-weight: 900;">
-                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.payout) / DESI, 2)} E2X</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.payout) / DESI, 2)} CSE</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
@@ -548,7 +548,7 @@ function renderMyEndedStakes(data) {console.log("e", data)
 
                     <div class="w-64 sm:w-auto truncate"
                         style="width: 100vw; text-align:center; font-weight: 900;">
-                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.stakeReturn) / DESI, 2)} E2X</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.stakeReturn) / DESI, 2)} CSE</span>
                     </div>
 
               

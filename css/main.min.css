@@ -2632,7 +2632,7 @@ table#prices thead tr th.checklist>p .soft-type{
 }
 table#prices thead tr th.checklist>p .price{
     text-transform: uppercase;
-    color: #673AB7;
+    color: #07d562;
     font-weight: bold;
     font-size: 50px;
 }
@@ -2648,8 +2648,8 @@ table#prices thead tr th.checklist .call-to-action >a{
 table#prices thead tr th.checklist .call-to-action a.btn-empty{
     display: block;
     background: transparent;
-    border: 2px solid #673ab7;
-    color: #673ab7;
+    border: 2px solid #07d562;
+    color: #07d562;
     padding: 9px 0;
     text-align: center;
     margin-top: 4px;
@@ -2658,7 +2658,7 @@ table#prices thead tr th.checklist .call-to-action a.btn-empty{
     text-decoration: none;
 }
 table#prices thead tr th.checklist .call-to-action a.btn-empty:hover{
-    background: #673ab7 !important;
+    background: #07d562 !important;
     color: #fff;
     text-decoration: none;
 }

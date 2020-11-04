@@ -42,7 +42,7 @@
 
 
 body {
-    background: #1e202b;
+    background: #0b0d0c;
 }
 
 input {
@@ -85,13 +85,13 @@ input[type=number] {
 
 .box-header {
     border-bottom: 3px solid #120f2757 !important;
-    background: #3a3e50 !important;
+    background: #272727 !important;
     border-radius: 9px;
     box-shadow: 0px 4px 8px #04041747 !important;
 }
 
 .box-body {
-    background: #313443 !important;
+    background: #1e1e1e !important;
     border-radius: 9px !important;
 }
 

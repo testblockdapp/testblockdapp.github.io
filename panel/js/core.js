@@ -874,10 +874,10 @@ const abi = [
 
     const DESI = 100000000
         const SUN = 1000000
-            const zeroAddress = "0x0000000000000000000000000000000000000000"
+            const zeroAddress = "0xdcA9e37fd9C666891F098efc840e04DddfB5BBF9"
                 let mainContract,
                     currentDay
-                let contractAddress = "0xda0c27269c049e915e2cc7e5f1a7a2f838ec8dec"
+                let contractAddress = "0x7557571194176e549E36D4D10819eC6c8505d44B"
 
                 let user = {
                         address: void 0,
@@ -903,7 +903,7 @@ const abi = [
                         console.log("conn")
                         // Or connect to a node
                     } else {
-                        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+                        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:5500"));
                     }
 
                     window.ethereum.enable()
@@ -1009,7 +1009,7 @@ const abi = [
                     mainContract.methods.balanceOf(user.address).call({shouldPollResponse: false}).then(res => {
                         user.balance = res
                         if ($('.your-token-balance-hd')[0]) 
-                            $('.your-token-balance-hd')[0].innerHTML = "Your E2X balance: " + (
+                            $('.your-token-balance-hd')[0].innerHTML = "Your CSE balance: " + (
                                 user.balance / 100000000
                             ).toLocaleString()
                         
