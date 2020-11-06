@@ -72,7 +72,7 @@ function getDaysData() {
 
         setInterval(() => {
             getMyStakes()
-        }, 1000 * 60 )
+        }, 1000 * 60)
 
     }
 }
@@ -251,7 +251,7 @@ function renderMyStakes(data) {
         if (!clcD1) activeRow = "item-slm"
 
         let stakedSuns = item.stakedSuns
-        let stakeShares =item.stakeShares
+        let stakeShares = item.stakeShares
 
         let stakeButton = `
         <div class="w-64 sm:w-auto truncate"
@@ -414,7 +414,7 @@ function calcInterest(item, item2, item3, stakeShares, startDay, endDay) {
         // if ($(`.${item2}`)[0].id && $(`.${item3}`)[0].id) $(`.${item2}`)[0].innerHTML = `${abbreviate_number(parseFloat($(`.${item2}`)[0].id) + parseFloat($(`.${item3}`)[0].id) + (parseInt(interest) / SUN), 2)}`
 
         $(`.${item}`)[0].innerHTML = `${abbreviate_number(interest, 2)}`
-        
+
         if ($(`.${item2}`)[0].id && $(`.${item3}`)[0].id) $(`.${item2}`)[0].innerHTML = `${abbreviate_number(parseFloat($(`.${item2}`)[0].id) + parseFloat($(`.${item3}`)[0].id) + interest, 2)}`
         // $(`.${item3}`)[0].innerHTML = `${abbreviate_number(parseFloat($(`.${item2}`)[0].id) + parseFloat($(`.${item3}`)[0].id) + interest / 100, 2)} CSE`
     }, 3000)
@@ -454,7 +454,7 @@ function endStake(stakeId) {
         }).then(res => {
             refreshMyStakes()
             setTimeout(() => {
-              //  refreshMyEndedStakes()
+                //  refreshMyEndedStakes()
             }, 1500)
         })
     }
@@ -475,7 +475,8 @@ function getMyEndedStakes() {
     }
 }
 
-function renderMyEndedStakes(data) {console.log("e", data)
+function renderMyEndedStakes(data) {
+    console.log("e", data)
     data.sort((b, a) => parseInt(a.date) - parseInt(b.date))
     data.forEach(item => {
         item.lockedDay = parseInt(item.lockedDay)

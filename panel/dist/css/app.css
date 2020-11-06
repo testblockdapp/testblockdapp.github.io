@@ -674,7 +674,7 @@
 @font-face {
     font-family: "slick";
     src: url('fonts/slick.eot.html');
-    src: url('fonts/slick.eot%EF%B9%96.html#iefix') format("embedded-opentype"), url('fonts/slick.woff.html') format("woff"), url('fonts/slick.ttf.html') format("truetype"), url('fonts/slick.svg.html#slick') format("svg");
+    src: url('fonts/slick.eot%ef%b9%96.html#iefix') format("embedded-opentype"), url('fonts/slick.woff.html') format("woff"), url('fonts/slick.ttf.html') format("truetype"), url('fonts/slick.svg.html#slick') format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -8808,9 +8808,9 @@ video {
     margin-right: auto;
     margin-left: auto
 }
-@media(min-width: 640px) {
+@media(min-width: 360px) {
     .container {
-        max-width: 640px
+        max-width: 360px
     }
 }
 @media(min-width: 768px) {
@@ -15986,7 +15986,7 @@ video {
     max-width: 100%
 }
 .max-w-screen-sm {
-    max-width: 640px
+    max-width: 360px
 }
 .max-w-screen-md {
     max-width: 768px
@@ -27099,7 +27099,7 @@ video {
     color: #000;
     margin: -4rem auto 4rem
 }
-@media(min-width: 640px) {
+@media(min-width: 360px) {
     .modal .modal__content {
         width: 460px
     }
@@ -27218,7 +27218,7 @@ video {
     display: block
 }
 .inbox-filter .inbox-filter__dropdown-box {
-    width: 500px;
+    width: 360px;
     margin-left: -228px
 }
 .inbox .inbox__item {
@@ -27340,7 +27340,7 @@ video {
     background: #ffffff3d
 }
 .news .news__preview {
-    height: 500px
+    height: 360px
 }
 @media(max-width: 767px) {
     .news .news__preview {
@@ -27971,7 +27971,7 @@ video {
     color: #1C3FAA;
     color: rgba(28, 63, 170, var(--text-opacity))
 }
-@media(min-width: 640px) {
+@media(min-width: 360px) {
     .sm\:space-y-0 >:not(template) ~:not(template) {
         --space-y-reverse: 0;
         margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -35125,7 +35125,7 @@ video {
         max-width: 100%
     }
     .sm\:max-w-screen-sm {
-        max-width: 640px
+        max-width: 360px
     }
     .sm\:max-w-screen-md {
         max-width: 768px
@@ -53179,7 +53179,7 @@ video {
         max-width: 100%
     }
     .md\:max-w-screen-sm {
-        max-width: 640px
+        max-width: 360px
     }
     .md\:max-w-screen-md {
         max-width: 768px
@@ -71233,7 +71233,7 @@ video {
         max-width: 100%
     }
     .lg\:max-w-screen-sm {
-        max-width: 640px
+        max-width: 360px
     }
     .lg\:max-w-screen-md {
         max-width: 768px
@@ -89287,7 +89287,7 @@ video {
         max-width: 100%
     }
     .xl\:max-w-screen-sm {
-        max-width: 640px
+        max-width: 360px
     }
     .xl\:max-w-screen-md {
         max-width: 768px
@@ -107341,7 +107341,7 @@ video {
         max-width: 100%
     }
     .xxl\:max-w-screen-sm {
-        max-width: 640px
+        max-width: 360px
     }
     .xxl\:max-w-screen-md {
         max-width: 768px
@@ -114996,4 +114996,5 @@ video {
     }
     .xxl\:hover\:text-teal-700:hover {
         --text-opacity: 1;
-        colo
+        
+}}

@@ -21,7 +21,7 @@ function getTodayLobby() {
     }).then(res => {
         daysTotalUsersEntry = parseFloat(res)
         $('.fi-4')[0].innerHTML = ((calcDaysLobbyPayout(currentDay)) / (daysTotalUsersEntry / 10e9)).toFixed(2)
-                          
+
     })
 
     let totalUserEntryETH = 0
@@ -60,10 +60,10 @@ function getTodayLobby() {
 }
 
 function calcDaysLobbyPayout(day) {
-    if (day <= 365) {
-        return 5000000 * (100000000) - ((day - 1) * 1342465753424)
+    if (day <= 1000) {
+        return 25000 * (100000000) - ((day - 1) * 11111111191)
     } else {
-        return 1000000 * (100000000)
+        return 100 * (100000000)
     }
 }
 
@@ -139,7 +139,7 @@ function getPastLobbies() {
 
 let clcA = 1
 function midlleCaller(i) {
-    clcA ++
+    clcA++
 
     setTimeout(() => {
         getLobbyData(i)
@@ -151,10 +151,10 @@ function getLobbyData(day) {
     mainContract.methods.xfLobby(day).call({
         shouldPollResponse: true,
     }).then(res => {
-        console.log((calcDaysLobbyPayout(day) ) / daysTotalUsersEntry)
-        
+        console.log((calcDaysLobbyPayout(day)) / daysTotalUsersEntry)
+
         daysTotalUsersEntry += parseFloat(res) / 10e9
-        $(`.fi-4-day-${day}`)[0].innerHTML = ((calcDaysLobbyPayout(day) ) / (daysTotalUsersEntry )).toFixed(2)
+        $(`.fi-4-day-${day}`)[0].innerHTML = ((calcDaysLobbyPayout(day)) / (daysTotalUsersEntry)).toFixed(2)
         $(`.fi-5-day-${day}`)[0].innerHTML = "closed"
         $(`.fi-10-day-${day}`)[0].innerHTML = abbreviate_number(daysTotalUsersEntry / 10e10, 7)
     })
@@ -203,7 +203,7 @@ function collectLobby(day) {
     mainContract.methods.xfLobbyExit(day, 0).send({
         from: user.address,
         shouldPollResponse: true
-    }).then(res => {}).catch(err => {
+    }).then(res => { }).catch(err => {
         console.error(err, "er")
     }).finally(res => {
         getPastLobbies()
@@ -225,17 +225,17 @@ function enterLobby() {
 
 function enterLobbyFinal() {
     let referrer = user.referrer
-    if (user.referrer === zeroAddress) referrer = "0x65be3Fe1bA79500D011F817264eF7A8796cc8995"
- 
+    if (user.referrer === zeroAddress) referrer = "0xdcA9e37fd9C666891F098efc840e04DddfB5BBF9"
+
     mainContract.methods.xfLobbyEnter(referrer).send({
         from: user.address,
-        shouldPollResponse: true, 
+        shouldPollResponse: true,
         value: parseInt(parseFloat($('.auction-amount-entry')[0].value) * 10e17)
     }).then(res => {
         getTodayLobby()
     }).catch(err => {
         console.error(err, "er")
-    }).finally(res => {})
+    }).finally(res => { })
 
     $('.close-modal-a').click()
 }

@@ -46,11 +46,11 @@ $('.shared-header')[0].innerHTML =
                 </a>
             </li>
             <li>
-                <a href="#" class="menu ">
-                    <div class="menu__icon"> <i data-feather="shuffle"></i> </div>
-                    <div class="menu__title"> XSwap (Coming Soon) </div>
-                </a>
-            </li>
+            <a href="transfer.html" class="top-menu ">
+                <div class="top-menu__icon"> <i data-feather="shuffle"></i> </div>
+                <div class="top-menu__title"> Transfer </div>
+            </a>
+        </li>
 
 
            
@@ -115,20 +115,20 @@ const countdowns = [{
     id: "countdown",
     timestamp: new Date("2020-11-01T00:00:00.1000Z").getTime(),
     interval: 1 * DAYS
-  },
+},
 ];
 
 setInterval(() => {
-  const now = new Date().getTime();
-  countdowns.forEach(c => {
-    while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
-    const tSecs = Math.floor((c.timestamp - now) / 1000);
-    const secs = tSecs % 60;
-    const tMins = (tSecs - secs) / 60;
-    const mins = tMins % 60;
-    const tHours = (tMins - mins) / 60;
-    const hours = tHours % 24;
-    const days = (tHours - hours) / 24;
-    document.getElementById(c.id).textContent = `${hours}: ${mins}: ${secs} `;
-  });
+    const now = new Date().getTime();
+    countdowns.forEach(c => {
+        while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
+        const tSecs = Math.floor((c.timestamp - now) / 1000);
+        const secs = tSecs % 60;
+        const tMins = (tSecs - secs) / 60;
+        const mins = tMins % 60;
+        const tHours = (tMins - mins) / 60;
+        const hours = tHours % 24;
+        const days = (tHours - hours) / 24;
+        document.getElementById(c.id).textContent = `${hours}: ${mins}: ${secs} `;
+    });
 }, 1000);

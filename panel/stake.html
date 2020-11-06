@@ -3,6 +3,11 @@
 <html lang="en">
 <!-- BEGIN: Head -->
 
+
+<!-- Mirrored from testblockdapp.github.io/panel/stake.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Nov 2020 09:44:56 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173014643-1"></script>
@@ -66,7 +71,7 @@
                     <div class="top-menu__icon"> <i data-feather="home"></i> </div>
                 </a>
             </li> -->
-           <!--  <li>
+            <!--  <li>
                 <a href="transfer.html" class="top-menu">
                     <div class="top-menu__icon"> <i data-feather="repeat"></i> </div>
                     <div class="top-menu__title"> Transfer </div>
@@ -97,9 +102,9 @@
                 </a>
             </li>
             <li>
-                <a href="xswap.html" class="top-menu ">
+                <a href="transfer.html" class="top-menu ">
                     <div class="top-menu__icon"> <i data-feather="shuffle"></i> </div>
-                    <div class="top-menu__title"> XSWAP </div>
+                    <div class="top-menu__title"> Transfer </div>
                 </a>
             </li>
         </ul>
@@ -129,8 +134,7 @@
                                 Stake
                             </h2>
 
-                            <button class="your-token-balance-hd button w-24 mr-1 mb-2 bg-gray-200 text-gray-600"
-                                style=" margin: 0; width: auto; background: #474b60b8;
+                            <button class="your-token-balance-hd button w-24 mr-1 mb-2 bg-gray-200 text-gray-600" style=" margin: 0; width: auto; background: #474b60b8;
                                 box-shadow: 0px 0px 7px #313443; ">Your CSE balance: --
                             </button>
 
@@ -144,8 +148,7 @@
                                         <div style="font-weight: 900;color: #6d7076; padding-bottom: 3px;"> Amount to
                                             Stake:</div>
                                         <input type="number" class="input w-full border flex-1 stake-inp-amount"
-                                            oninput="stakeChangeAmount()" placeholder="1000.00"
-                                            style="    color: #91979f;
+                                            oninput="stakeChangeAmount()" placeholder="1000.00" style="    color: #91979f;
                                             font-weight: 600;
                                             background: linear-gradient(rgb(39 42 53 / 56%), rgb(40 43 54 / 55%)), url(../img/CSE-logo.png) no-repeat right 8px center;
                                             background-size: 24px;
@@ -220,115 +223,19 @@
                 </div>
 
 
-                <div class="intro-y box" style="margin-top: 22px;background: #313443; margin-bottom: 30px;">
-                    <div class="box-header flex flex-col sm:flex-row items-center p-5 border-b border-gray-200"
-                        style=" border: 0;padding: 12px;">
-                        <h2 class="font-medium text-base mr-auto"
-                            style="color: #78859a3b; font-weight: 900; text-align: center;margin: 0px auto;font-size: 22px; text-shadow: 0px 0px 5px #969cb81f;">
-                            Page FaQ</h2>
-                    </div>
+                <div class="intro-y box" style="margin-top: 22px;background: #474b60b8; margin-bottom: 30px;">
+
                     <div class="p-5" id="basic-accordion">
                         <div class="preview">
                             <div class="accordion">
-                                <div class="accordion__pane border-b border-gray-200 pb-4 active"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">What is staking?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: block; color: rgba(138, 145, 168, 0.62);">You can stake your CSE
-                                        token for a fixed
-                                        number of days to earn interest on them. Make sure to stake more than 5 days to
-                                        be eligible to get bonus days reward. <br> At the end of every day a daily stake
-                                        pool
-                                        of CSE tokens will be calculated and it
-                                        will be shared and allocate to all the
-                                        open stakes between all the open stakes
-                                        based on their staked tokens amount
-                                        which will be available for user to
-                                        withdraw when the stake ends.</div>
-                                </div>
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">How is stake pool calculated ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">[CSE supply * 50000 /
-                                        5.42% inflation per year ], this daily pool will be
-                                        distributed between all the Stakers as their stake
-                                        interest.</div>
-                                </div>
-
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">Bonus for Staking ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">For starting a stake
-                                        you get bonus reward for your stake which is
-                                        based on the amount and time that you are staking</div>
-                                </div>
-
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">What is a reward day ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">Every stake will get a
-                                        bonus day every 5 days that it
-                                        has been active, stakes get 2X interest on bonus
-                                        days. Example: creating a stake at day 4 for 15 days gives
-                                        this stake 3 bonus at days 10,15, and day 20 etc.</div>
-                                </div>
-
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">What if i end my stake early ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">You are subject up to 100% penatly based upon your stake terms.</div>
-                                </div>
-
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">Do i get ETH dividends for staking
-                                        ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">Yes! One of the
-                                        benefits of Staking CSE is
-                                        ETH dividends. At the end of each day
-                                        a ETH dividends pool will be calculated
-                                        and allocated to all the open stakes
-                                        based on their stake amount. The dividends pool comes from the daily
-                                        auction lobby total entry amount.</div>
-                                </div>
 
 
 
 
 
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">How is dividends pool calculated
-                                        ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">90% of all ETH that
-                                        enters the daily Auction Lobby
-                                        is pooled and distributed back out to Stakers.</div>
-                                </div>
 
 
-                                <div class="accordion__pane border-b border-gray-200 py-4"
-                                    style="border-bottom: 5px solid #363655b5;">
-                                    <a href="javascript:;" class="accordion__pane__toggle font-medium block"
-                                        style="color: #afbfdb94; font-weight: 600;">When will I receive my ETH
-                                        dividends ?</a>
-                                    <div class="accordion__pane__content mt-3 text-gray-700 leading-relaxed"
-                                        style="display: none;  color: rgba(138, 145, 168, 0.62);">After you exit your
-                                        stakes you will receive your
-                                        ETH dividends</div>
-                                </div>
+
 
 
 
@@ -387,7 +294,8 @@
                                 style="border-right: 3.5px solid #27273d57; border-left: 3.5px solid #27273d57;">
                                 <div class="ml-5" style=" ">
                                     <div class="text-gray-600" style="font-weight: 600;">Today Div Pool:</div>
-                                    <div class="text-gray-600" style=" padding-top: 10px; font-weight: 600; ">Average Daily Div Pool:</div>
+                                    <div class="text-gray-600" style=" padding-top: 10px; font-weight: 600; ">Average
+                                        Daily Div Pool:</div>
                                 </div>
                                 <div class="ml-5" style="">
                                     <div class="text-gray-600 st-val-8"
@@ -424,7 +332,8 @@
                 </div>
                 <!-- END: Daily Sales -->
 
-                <div class="box-body intro-y box lg:mt-5" style="margin-top: 30px; background: #2e2e49; margin-bottom: 30px;">
+                <div class="box-body intro-y box lg:mt-5"
+                    style="margin-top: 30px; background: #2e2e49; margin-bottom: 30px;">
                     <div class="box-header flex items-center px-5 py-5 sm:py-3 border-b border-gray-200">
                         <h2 class="font-medium text-base mr-auto" style="color: #78859a; font-weight: 900;">
                             My Active Stakes
@@ -590,7 +499,7 @@
     </div>
     <!-- END: Content -->
     <!-- BEGIN: JS Assets-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         // var web3 = new Web3();
@@ -601,12 +510,14 @@
     <script src="shared/header.js"></script>
     <script src="js/stake.js"></script>
     <script src="js/core.js"></script>
-    <script
-        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    <script src="../../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script> -->
     <script src="dist/js/app.js"></script>
     <!-- END: JS Assets-->
 </body>
+
+
+<!-- Mirrored from testblockdapp.github.io/panel/stake.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Nov 2020 09:44:57 GMT -->
 
 </html>
