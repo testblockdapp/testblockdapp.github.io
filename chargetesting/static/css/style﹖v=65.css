@@ -1027,7 +1027,7 @@ footer .logo img {
   display: flex;
 }
 .modal__container .container {
-  overflow-y: scroll;
+
 }
 .modal__container h2 {
   font-weight: 500;
@@ -1052,7 +1052,7 @@ footer .logo img {
   box-shadow: 0px 24px 50px rgba(78, 159, 209, 0.15);
 }
 .modal__container table tbody tr td {
-  background: #0b0d0c;
+  background: #272727;
   height: 76px;
 }
 .modal__container table tbody tr td:first-child {
@@ -2009,7 +2009,7 @@ footer .logo img {
     width: initial!important;
   }
   .modal-stat .stat-progress__footer {
-    background: #0b0d0c;
+    background: #272727;
   }
   .ref__left {
     display: -webkit-box;
@@ -2337,7 +2337,7 @@ footer .logo img {
     cursor: pointer;
   }
   .modal__container {
-    background: #0b0d0c;
+    background: #272727;
     max-width: 970px;
     margin: 0 auto;
     padding: 63px 40px;
@@ -2353,7 +2353,7 @@ footer .logo img {
     box-shadow: none !important;
   }
   .modal__container table tr td {
-    background: #F7F7FA !important;
+    background: #272727 !important;
     font-size: 16px !important;
   }
   .modal__container .container .stat-token {

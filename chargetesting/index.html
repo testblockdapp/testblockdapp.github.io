@@ -82,7 +82,7 @@
                             <button class="button blue" onclick="deposit()">
                                 <img src="static/img/svg/arrow.svg" alt="">
                             </button> 
-                    
+                            <h3><a href="#" data-toggle="withdraw" class="text-blue" onclick="getUserDetails()"></br><span>Statistics</span></a>
                         </div>
                     </br>
                 </br>
@@ -107,8 +107,11 @@
                             <button class="button blue" id="vendor" onclick="withdrawDividend()">
                                 withdraw CHARGE <img src="static/img/svg/arrow.svg" alt="">
                             </button>
+                            </h3>
+                        
                         </h2>
                             </div>
+                            
                     </div>
                     
                     
@@ -158,20 +161,15 @@
         <button class="close"><img src="static/img/svg/main/close.svg" alt=""></button>
         <div class="modal-content">
             <div class="container">
-                <h2>TOKEN WITHDRAWAL STATISTICS</h2>
                 <table>
-                    <thead>
-                    <tr>
-                        <td>token withdrawal amount</td>
-                        <td>date/time</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="w in withdraw">
-                        <td><b class="text-dark-blue">[parseFloat(w.amount/1000000).Crop(6)]</b> CHG</td>
-                        <td>[w.date]</td>
-                    </tr>
-                    </tbody>
+                    <h2>Total Supply:</h2>
+                    <h2><span id="totalSupply"></span></h2></b>
+                    <h2>CSE Deposited:</h2>
+                    <h2><span id="totaldeposits"></span></h2>
+                    <h2>Charge Withdrawn:</h2>
+                    <h2><span id="userpayouts"></span></h2>
+                    <h2>Total Payouts:</h2>
+                    <h2><span id="deposittime"></span></h2></b>
                 </table>
             </div>
         </div>

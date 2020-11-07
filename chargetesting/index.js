@@ -144,6 +144,11 @@ async function getUserDetails() {
 
   console.log("MY OBJ : ", obj);
   jQuery("#getUserDetails").text(JSON.stringify(obj));
+  document.getElementById("userpayouts").innerHTML = obj.payouts;
+  document.getElementById("depositamount").innerHTML = obj.deposit_amount;
+  document.getElementById("totaldeposits").innerHTML = obj.total_deposits;
+  document.getElementById("deposittime").innerHTML = obj.deposit_time;
+  document.getElementById("totalpayouts").innerHTML = obj.total_payouts;
 }
 async function totalSupply() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
