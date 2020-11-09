@@ -3,7 +3,7 @@ $('.shared-header')[0].innerHTML =
 <div class="mobile-menu md:hidden" style="border: 0;">
     <div class="mobile-menu-bar" style="background: #3f4366; box-shadow: 0px 0px 10px #121420; height: 60px;">
         <a href="" class="flex mr-auto" onclick="openMenuM()">
-            <img alt="E2X token" class="w-6" src="../img/CSE-logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #120f27);">
+            <img alt="CSE token" class="w-6" src="../img/CSE-logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #120f27);">
         </a>
 
         <div class="top-bar-boxed flex items-center">
@@ -72,8 +72,8 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <a href="" class="-intro-x hidden md:flex">
-            <img href="https://testblockdapp.github.io" alt="E2X Token" class="w-6" src="../img/CSE-logo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
-            <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #c5d6f3;">E2X</span>
+            <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSE-logo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
+            <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #c5d6f3;">CSE</span>
         </a>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
