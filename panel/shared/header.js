@@ -7,9 +7,9 @@ $('.shared-header')[0].innerHTML =
         </a>
 
         <div class="top-bar-boxed flex items-center">
-            <div style="background: #040417;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" style="padding-right: 10px;">Day Ends In: 01 : 17 : 22</span></div>
+            <div style="background: #040417;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 2px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-left: 20px;margin-right: 20px;"><span class="day-end-in" style="padding-right: 10px;padding-left: 10px;">Day Ends In: 01 : 17 : 22</span></div>
 
-            <div style="background: #040417;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 10px;"><span class="my-acc-add">TDH1z...8m6d6</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/700398613230125076/IIWYRzhS_400x400.jpg" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
+            <div style="background: #040417;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 10px 2px 10px;border: px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-left: 20px;margin-right: 10px;"><span class="my-acc-add">TDH1z...8m6d6</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/700398613230125076/IIWYRzhS_400x400.jpg" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
         </div>
 
 
@@ -72,13 +72,13 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <a href="" class="-intro-x hidden md:flex">
-            <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSELogo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
-            <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #07d662;">CSEth</span>
+            <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSE-logo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
+            <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #07d662;"></span>
         </a>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
-        <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #262935; border-left: 0px solid #040417;"> 
-        <span style="font-size: 20px;color: #8585a8ba;font-weight: 400;">Community Staking Experiment</span></div>
+        <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #262935; border-left: 0px solid #07d662;"> 
+        <span style="font-size: 20px;color: #07d662;font-weight: 400;">Community Staking Experiment</span></div>
         <!-- END: Breadcrumb -->
         <div style="background: #17280a;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 1px solid #07d662;color: #ffffff;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="" style="padding-right: 10px;"><a href="https://ropsten.etherscan.io/address/0x7557571194176e549E36D4D10819eC6c8505d44B" target="_blank">Etherscan</a></span></div>
 
@@ -93,7 +93,7 @@ $('.shared-header')[0].innerHTML =
 let mmO
 setInterval(() => {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $('.hd-nm')[0].style.display = "none"
+        $('.hd-nm')[0].style.display = "show"
         $('.my-acc-add')[0].style.fontSize = "16px"
         $('.day-end-in')[0].style.fontSize = "16px"
     }
@@ -106,7 +106,7 @@ function openMenuM() {
         $('.mobile-exten')[0].style.display = "none"
     } else {
         mmO = true
-        $('.mobile-exten')[0].style.display = "block"
+        $('.mobile-exten')[0].style.display = "none"
     }
 }
 const DAYS = 24 * 3600 * 1000;

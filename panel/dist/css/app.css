@@ -26904,7 +26904,7 @@ video {
     }
 }
 .mobile-menu .mobile-menu-bar {
-    height: 70px;
+    height: 50px;
     padding-left: 2rem;
     padding-right: 2rem;
     display: flex;
@@ -114997,4 +114997,4 @@ video {
     .xxl\:hover\:text-teal-700:hover {
         --text-opacity: 1;
         
-}}
+    ;}
