@@ -38,11 +38,11 @@ function rnChartLt() {
             if (_clcDays.length == 0) {
                 drawChartLt(days, values)
                 setTimeout(() => {
-                    $('.ct-line')[0].style.stroke = "#f05b4f"
+                    $('.ct-line')[0].style.stroke = "#07d562"
                     // $('.ct-area')[0].style.stroke = "#ff1300"
 
                     let dts = $('.ct-vertical')
-                    for (var i = 0 ; i < dts.length ; i++) {
+                    for (var i = 0; i < dts.length; i++) {
                         if (dts[i].innerHTML !== "0") {
                             dts[i].innerHTML = dts[i].innerHTML + " ETH"
                         }

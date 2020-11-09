@@ -7,9 +7,9 @@ $('.shared-header')[0].innerHTML =
         </a>
 
         <div class="top-bar-boxed flex items-center">
-            <div style="background: #040417;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" style="padding-right: 10px;">Day Ends In: 01 : 17 : 22</span></div>
+            <div style="background: #040417;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 2px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-left: 20px;margin-right: 20px;"><span class="day-end-in" style="padding-right: 10px;padding-left: 10px;">Day Ends In: 01 : 17 : 22</span></div>
 
-            <div style="background: #040417;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 10px;"><span class="my-acc-add">TDH1z...8m6d6</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/700398613230125076/IIWYRzhS_400x400.jpg" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
+            <div style="background: #040417;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 10px 2px 10px;border: px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-left: 20px;margin-right: 10px;"><span class="my-acc-add">TDH1z...8m6d6</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/700398613230125076/IIWYRzhS_400x400.jpg" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
         </div>
 
 
@@ -46,11 +46,11 @@ $('.shared-header')[0].innerHTML =
                 </a>
             </li>
             <li>
-                <a href="#" class="menu ">
-                    <div class="menu__icon"> <i data-feather="shuffle"></i> </div>
-                    <div class="menu__title"> XSwap (Coming Soon) </div>
-                </a>
-            </li>
+            <a href="transfer.html" class="top-menu ">
+                <div class="top-menu__icon"> <i data-feather="shuffle"></i> </div>
+                <div class="top-menu__title"> Transfer </div>
+            </a>
+        </li>
 
 
            
@@ -73,19 +73,23 @@ $('.shared-header')[0].innerHTML =
         <!-- BEGIN: Logo -->
         <a href="" class="-intro-x hidden md:flex">
             <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSE-logo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
+<<<<<<< HEAD
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #c5d6f3;">CSE</span>
+=======
+            <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #07d662;"></span>
+>>>>>>> 83d9535743ec96590bc12ede498877496f1352d2
         </a>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
-        <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #262935; border-left: 0px solid #040417;"> 
-        <span style="font-size: 20px;color: #8585a8ba;font-weight: 400;">Next Generation Staking Platform</span></div>
+        <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #262935; border-left: 0px solid #07d662;"> 
+        <span style="font-size: 20px;color: #07d662;font-weight: 400;">Community Staking Experiment</span></div>
         <!-- END: Breadcrumb -->
-        <div style="background: #2c303d;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="" style="padding-right: 10px;"><a href="https://etherscan.io/address/0xda0c27269c049e915e2cc7e5f1a7a2f838ec8dec" target="_blank">Etherscan</a></span></div>
+        <div style="background: #17280a;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 1px solid #07d662;color: #ffffff;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="" style="padding-right: 10px;"><a href="https://ropsten.etherscan.io/address/0x7557571194176e549E36D4D10819eC6c8505d44B" target="_blank">Etherscan</a></span></div>
 
 
-        <div style="background: #2c303d;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="" style="padding-right: 10px;">Auction Ends:</span><span id="countdown" </span></div>
+        <div style="background: #17280a;/* box-shadow: 2px 2px 8px #202639a1; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 1px solid #07d662;color: #ffffff;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="" style="padding-right: 10px;">Auction Ends:</span><span id="countdown"</span></div>
 
-        <div style="background: #2c303d;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #42527178;color: #c5d6f3;font-size: 18px;font-weight: 500;"><span class="my-acc-add">...</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/771703875602350090/metamask-2728406-2261817.png" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div></span>
+        <div style="background: #17280a;box-shadow: 2px 2px 8px #202639a1;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 1px solid #07d662;color: #ffffff;font-size: 18px;font-weight: 500;"><span class="my-acc-add">...</span><img class="img-tronlink" src="https://cdn.discordapp.com/attachments/572416318234427402/771703875602350090/metamask-2728406-2261817.png" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div></span>
     </div>
 </div>
 `
@@ -93,7 +97,7 @@ $('.shared-header')[0].innerHTML =
 let mmO
 setInterval(() => {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $('.hd-nm')[0].style.display = "none"
+        $('.hd-nm')[0].style.display = "show"
         $('.my-acc-add')[0].style.fontSize = "16px"
         $('.day-end-in')[0].style.fontSize = "16px"
     }
@@ -106,7 +110,7 @@ function openMenuM() {
         $('.mobile-exten')[0].style.display = "none"
     } else {
         mmO = true
-        $('.mobile-exten')[0].style.display = "block"
+        $('.mobile-exten')[0].style.display = "none"
     }
 }
 const DAYS = 24 * 3600 * 1000;
@@ -115,20 +119,20 @@ const countdowns = [{
     id: "countdown",
     timestamp: new Date("2020-11-01T00:00:00.1000Z").getTime(),
     interval: 1 * DAYS
-  },
+},
 ];
 
 setInterval(() => {
-  const now = new Date().getTime();
-  countdowns.forEach(c => {
-    while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
-    const tSecs = Math.floor((c.timestamp - now) / 1000);
-    const secs = tSecs % 60;
-    const tMins = (tSecs - secs) / 60;
-    const mins = tMins % 60;
-    const tHours = (tMins - mins) / 60;
-    const hours = tHours % 24;
-    const days = (tHours - hours) / 24;
-    document.getElementById(c.id).textContent = `${hours}: ${mins}: ${secs}`;
-  });
+    const now = new Date().getTime();
+    countdowns.forEach(c => {
+        while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
+        const tSecs = Math.floor((c.timestamp - now) / 1000);
+        const secs = tSecs % 60;
+        const tMins = (tSecs - secs) / 60;
+        const mins = tMins % 60;
+        const tHours = (tMins - mins) / 60;
+        const hours = tHours % 24;
+        const days = (tHours - hours) / 24;
+        document.getElementById(c.id).textContent = `${hours}: ${mins}: ${secs} `;
+    });
 }, 1000);
