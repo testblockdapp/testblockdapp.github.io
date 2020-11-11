@@ -296,18 +296,22 @@
         </div>
     </div>
 </div>
+
 <div class="modal" data-modal="menu">
     <div class="modal__container modal-menu">
-        <button class="close"><img src="static/img/svg/main/close.svg" alt=""></button>
+        <button class="close"><img src="static/img/svg/main/close.svg" alt="" onclick="getUserDetails()"></button>
         <div class="container">
-            <div class="wallet_info">
-                <h6>your wallet</h6>
-                <h5 v-if="user">[user_login]</h5>
-                <button class="button green" v-if="!user" data-toggle="login">login</button>
+            <div class="modal-content">
+                <menu class="menu d-none">
+                    <div><h2>
+
+                    </div></h2>
+                </menu>
             </div>
             <menu>
                 <li><a href="https://justswap.org/?lang=en-US#/home?tokenAddress=TVs1rRWrBkgQ5zxksYJuCeGthFohjKUGyy&amp;type=swap" target="_blank">trade CHARGE</a></li>
-                
+                <li><a href="https://csetron.github.io/auction" target="_blank">CSE Auction</a></li>
+                <li><a href="https://shasta.tronscan.org/#/contract/TUC8CqVnBkw5oF4QefWLWR5rdAiTVrrMpL" target="_blank">Contract</a></li>
             </menu>
             <ul class="soc">
                 <li onclick="window.open('https://twitter.com/CseTron')"><a href="https://twitter.com/CseTron"
@@ -316,13 +320,8 @@
                 </a>
                 </li>
                 <li >
-                    <a href="#" data-toggle="soc" target="_blank">
+                    <a href="https://t.me/csetron" data-toggle="soc" target="_blank">
                         <img src="static/img/svg/main/tl.svg" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-toggle="lang" class="lang">
-                        <img src="static/img/flags/en.png" alt="">
                     </a>
                 </li>
             </ul>
@@ -693,7 +692,7 @@
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script>
+   <script>
 
 
         $('body').on('click', '.select', function () {
@@ -750,7 +749,7 @@
             delimiters: ['[', ']'],
             data() {
                 return {
-                    wallet: '+++++CONTRACTADDRESS+++++',
+                    wallet: 'TLNiWgSAL9RjHXhDXP3XFRrabZJx6KG7fm',
                     active: false,
                     avaiable: 0,
                     
@@ -897,7 +896,7 @@
                     })
                 },
                 getTrxPrice: function () {
-                    $.get('https://api.just.network/swap/scan/statusinfo?exchangeAddress=TYCzxqZBWUBYhftFqVthk2xGmwpbtvFBUB', (d) => {
+                    $.get('https://api.just.network/swap/scan/statusinfo?exchangeAddress=TLNiWgSAL9RjHXhDXP3XFRrabZJx6KG7fm', (d) => {
                         this.curses.trx_price = d.data.trxPrice;
                     })
                 },
