@@ -1,7 +1,7 @@
 let connection;
 let mainAccount;
 let tokenContractAddress = "TVs1rRWrBkgQ5zxksYJuCeGthFohjKUGyy";
-let contractAddress = "TEjp6feb6MwSDhXW1iB5KYjzSh7hojBsap";
+let contractAddress = "TVu2keBLZrbmx9QTXHuzQwhPF242fsheN2";
 window.addEventListener("message", (e) => {
   setInterval(function checkConnection() {
     if (
