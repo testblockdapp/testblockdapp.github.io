@@ -21,6 +21,9 @@ window.addEventListener("message", (e) => {
       jQuery(document).ready(function () {
         isLocked();
         getBalanceOfAccount();
+        balanceOfCSE();
+        getUserDividend();
+        totalSupply();
       });
     }
 
@@ -94,6 +97,7 @@ async function deposit() {
     });
 }
 async function withdrawDividend() {
+  let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
   contract
     .withdrawReward()
@@ -106,7 +110,6 @@ async function withdrawDividend() {
     });
 }
 async function getUserDividend() {
-  const address = jQuery("#getUserDividendAddress").val()
   let contract = await tronWeb.contract().at(contractAddress);
   console.log("contract:" + contract);
   let details = await contract.payoutOf(mainAccount).call();
@@ -119,14 +122,14 @@ async function getUserDividend() {
 
   console.log("MY OBJ : ", obj);
   jQuery("#getUserDividend").text(JSON.stringify(obj));
+  document.getElementById("dividend").innerHTML = obj.dividend;
 }
 //get user detail
 async function getUserDetails() {
-  const address = jQuery("#getUserDetailsAddress").val()
   console.log("get user detail function called!");
   let contract = await tronWeb.contract().at(contractAddress);
   console.log("contract:" + contract);
-  let details = await contract.users(address).call();
+  let details = await contract.users(mainAccount).call();
   console.log("DETAILS : ", details);
 
   let obj = {
@@ -134,57 +137,45 @@ async function getUserDetails() {
     deposit_amount: parseInt(details.deposit_amount) / 100000000,
     deposit_payouts: parseInt(details.deposit_payouts) / 100000000,
     deposit_time: parseInt(details.deposit_time),
-    total_deposits: parseInt(details.total_deposits) / 100000000,
+    total_deposits: parseInt(details.total_deposits),
     total_payouts: parseInt(details.total_payouts) / 100000000,
   };
 
   console.log("MY OBJ : ", obj);
   jQuery("#getUserDetails").text(JSON.stringify(obj));
+  document.getElementById("userpayouts").innerHTML = obj.payouts;
+  document.getElementById("depositamount").innerHTML = obj.deposit_amount;
+  document.getElementById("totaldeposits").innerHTML = obj.total_deposits;
+  document.getElementById("deposittime").innerHTML = obj.deposit_time;
+  document.getElementById("totalpayouts").innerHTML = obj.total_payouts;
 }
 async function totalSupply() {
+  let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
   let details = await contract.totalSupply().call();
   jQuery("#totalSupply").text(parseInt(details) / 100000000);
 }
 async function balanceOf() {
-  const address = jQuery("#balanceOfAddress").val()
+  let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
-  let details = await contract.balanceOf(address).call();
+  let details = await contract.balanceOf(mainAccount).call();
   jQuery("#balanceOf").text(parseInt(details) / 100000000);
 }
 async function balanceOfCSE() {
-  const address = jQuery("#balanceOfCSEAddress").val()
+  let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(tokenContractAddress);
-  let details = await contract.balanceOf(address).call();
+  let details = await contract.balanceOf(mainAccount).call();
   jQuery("#balanceOfCSE").text(parseInt(details) / 100000000);
 }
 async function tokenName() {
+  let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
   let details = await contract.name().call();
   jQuery("#name").text((details));
 }
 async function tokenSymbol() {
+  let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
   let details = await contract.symbol().call();
   jQuery("#symbol").text((details));
 }
-
-const unixTimestamp = deposit.output;
-const milliseconds = unixTimestamp * 1000 // 1606073880000
-
-var x = setInterval(function () {
-  var now = new Date().getTime();
-  var distance = milliseconds - now;
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "CSE Charged!";
-  }
-
-}, 1000);
