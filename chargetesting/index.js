@@ -1,7 +1,7 @@
 let connection;
 let mainAccount;
 let tokenContractAddress = "TLNiWgSAL9RjHXhDXP3XFRrabZJx6KG7fm";
-let contractAddress = "TAhQoHCaEGaR2qBK1Gc53vvSsUgva1YNCX";
+let contractAddress = "TUC8CqVnBkw5oF4QefWLWR5rdAiTVrrMpL";
 window.addEventListener("message", (e) => {
   setInterval(function checkConnection() {
     if (
@@ -78,7 +78,7 @@ async function deposit() {
   let Tokencontract = await tronWeb.contract().at(tokenContractAddress);
   let capitalContract = await tronWeb.contract().at(contractAddress);
   console.log("amount:" + amount);
-  await Tokencontract.approve(contractAddress, amount)
+  await Tokencontract.approve(contractAddress, amount * 100000000)
     .send({
       feeLimit: 100000000,
     })
@@ -116,8 +116,8 @@ async function getUserDividend() {
   console.log("DETAILS : ", details);
 
   let obj = {
-    dividend: parseInt(details.payout),
-    MaxToPay: parseInt(details.max_payout),
+    dividend: parseInt(details.payout) / 100000000,
+    MaxToPay: parseInt(details.max_payout) / 100000000,
   };
 
   console.log("MY OBJ : ", obj);
@@ -133,13 +133,12 @@ async function getUserDetails() {
   console.log("DETAILS : ", details);
 
   let obj = {
-    payouts: parseInt(details.payouts),
-    deposit_amount: parseInt(details.deposit_amount),
-    deposit_payouts: parseInt(details.deposit_payouts),
+    payouts: parseInt(details.payouts) / 100000000,
+    deposit_amount: parseInt(details.deposit_amount) / 100000000,
+    deposit_payouts: parseInt(details.deposit_payouts) / 100000000,
     deposit_time: parseInt(details.deposit_time),
-    deposit_payouts: parseInt(details.deposit_payouts),
     total_deposits: parseInt(details.total_deposits),
-    total_payouts: parseInt(details.total_payouts),
+    total_payouts: parseInt(details.total_payouts) / 100000000,
   };
 
   console.log("MY OBJ : ", obj);
@@ -154,19 +153,19 @@ async function totalSupply() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
   let details = await contract.totalSupply().call();
-  jQuery("#totalSupply").text(parseInt(details));
+  jQuery("#totalSupply").text(parseInt(details) / 100000000);
 }
 async function balanceOf() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(contractAddress);
   let details = await contract.balanceOf(mainAccount).call();
-  jQuery("#balanceOf").text(parseInt(details));
+  jQuery("#balanceOf").text(parseInt(details) / 100000000);
 }
 async function balanceOfCSE() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(tokenContractAddress);
   let details = await contract.balanceOf(mainAccount).call();
-  jQuery("#balanceOfCSE").text(parseInt(details));
+  jQuery("#balanceOfCSE").text(parseInt(details) / 100000000);
 }
 async function tokenName() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
