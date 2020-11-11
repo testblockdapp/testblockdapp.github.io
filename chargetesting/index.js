@@ -165,7 +165,7 @@ async function balanceOfCSE() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
   let contract = await tronWeb.contract().at(tokenContractAddress);
   let details = await contract.balanceOf(mainAccount).call();
-  jQuery("#balanceOfCSE").text(parseInt(details) / 100000000);
+  jQuery("#balanceOfCSE").text(parseInt(details));
 }
 async function tokenName() {
   let currentAddress = window.tronWeb.defaultAddress.base58;
