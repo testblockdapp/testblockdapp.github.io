@@ -73,7 +73,11 @@ $('.shared-header')[0].innerHTML =
         <!-- BEGIN: Logo -->
         <a href="" class="-intro-x hidden md:flex">
             <img href="https://testblockdapp.github.io" alt="CSE Token" class="w-6" src="../img/CSE-logo.png" style="width: 3rem; filter: drop-shadow(2px 2px 7px rgba(177, 186, 216, 0.6));">
+<<<<<<< HEAD
+            <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #c5d6f3;">CSE</span>
+=======
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #07d662;"></span>
+>>>>>>> 83d9535743ec96590bc12ede498877496f1352d2
         </a>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
