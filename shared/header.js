@@ -1,22 +1,22 @@
 $('.shared-header')[0].innerHTML =
 `
 <div class="mobile-menu md:hidden" style="border: 0;">
-    <div class="mobile-menu-bar" style="background: #eff3f6; box-shadow: 0px 0px 10px #07d562; height: 60px;">
+    <div class="mobile-menu-bar" style="background: #282b36; box-shadow: 0px 0px 10px #07d562; height: 60px;">
         <a class="flex mr-auto" onclick="openMenuM()">
             <img alt="CSNE token" class="w-6" src="./img/logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #07d562);">
         </a>
 
         <div class="top-bar-boxed flex items-center">
-            <div style="background: #eff3f6;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #2eff3c;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" id="countdownm" style="padding-right: 10px; color: #111 !important;">Auction ends at 00:00 UTC</span></div>
+            <div style="background: #282b36;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #2eff3c;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" id="countdownm" style="padding-right: 10px; color: #a2a8a9 !important;">Auction ends at 00:00 UTC</span></div>
 
-            <div style="background: #eff3f6;box-shadow: 2px 2px 8px #07d562;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #111;font-size: 18px;font-weight: 500;margin-right: 10px;"><span class="my-acc-add"></span><img class="img-mm" src="https://cdn.discordapp.com/attachments/572416318234427402/771703875602350090/metamask-2728406-2261817.png" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
+            <div style="background: #282b36;box-shadow: 2px 2px 8px #07d562;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;margin-right: 10px;"><span class="my-acc-add"></span><img class="img-mm" src="https://cdn.discordapp.com/attachments/572416318234427402/771703875602350090/metamask-2728406-2261817.png" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
         </div>
 
         <a onclick="openMenuM()"> <i data-feather="bar-chart-2"
-                class="w-8 h-8 text-white transform -rotate-90" style="color: #111 !important;"></i> </a>
+                class="w-8 h-8 text-white transform -rotate-90" style="color: #a2a8a9 !important;"></i> </a>
     </div>
 
-    <div class="mobile-exten" style="background: #eff3f6;box-shadow: 0px 0px 10px #2a230b;height: 60px;z-index: 1000000000;position: absolute;width: 100%;display: flex;align-items: center;display: none; height: auto;">
+    <div class="mobile-exten" style="background: #282b36;box-shadow: 0px 0px 10px #2a230b;height: 60px;z-index: 1000000000;position: absolute;width: 100%;display: flex;align-items: center;display: none; height: auto;">
 
         <ul class="border-t border-theme-24 py-7" style="color: red;">
              <li>
@@ -58,7 +58,7 @@ $('.shared-header')[0].innerHTML =
 
 
 </div>
-<div class="border-b hd-nm border-theme-24 -mt-10 md:-mt-5 -mx-3 sm:-mx-8 px-3 sm:px-8 pt-3 md:pt-0 mb-10" style="background: #eff3f6;border-bottom: 1px solid #040417;">
+<div class="border-b hd-nm border-theme-24 -mt-10 md:-mt-5 -mx-3 sm:-mx-8 px-3 sm:px-8 pt-3 md:pt-0 mb-10" style="background: #282b36;border-bottom: 1px solid #040417;">
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <div class="-intro-x hidden md:flex">
@@ -67,18 +67,18 @@ $('.shared-header')[0].innerHTML =
         </div>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
-        <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #eff3f6; border-left: 0px solid #040417;"> 
-        <span style="font-size: 20px;color: #111;font-weight: 400;">CSE ETH</span></div>
+        <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #282b36; border-left: 0px solid #040417;"> 
+        <span style="font-size: 20px;color: #a2a8a9;font-weight: 400;">CSE ETH</span></div>
         <!-- END: Breadcrumb -->
-        <div style="background: #eff3f6;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #111;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="trcwebsite" style="padding-right: 10px;"><a href="" target="_blank">TRC Website</a></span></div>
+        <div style="background: #282b36;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="trcwebsite" style="padding-right: 10px;"><a href="" target="_blank">TRC Website</a></span></div>
 
-        <div style="background: #eff3f6;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #111;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="telegram" style="padding-right: 10px;"><a href="https://t.me" target="_blank">Telegram</a></span></div>
+        <div style="background: #282b36;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="telegram" style="padding-right: 10px;"><a href="https://t.me" target="_blank">Telegram</a></span></div>
 
-        <div style="background: #eff3f6;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #111;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="etherscan" style="padding-right: 10px;"><a href="https://etherscan.io/" target="_blank">Etherscan</a></span></div>
+        <div style="background: #282b36;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="etherscan" style="padding-right: 10px;"><a href="https://etherscan.io/" target="_blank">Etherscan</a></span></div>
 
-        <div style="background: #eff3f6;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #111;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" id="countdown" style="padding-right: 10px;">Auction ends at: 00:00:00</span></div>
+        <div style="background: #282b36;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="day-end-in" id="countdown" style="padding-right: 10px;">Auction ends at: 00:00:00</span></div>
 
-        <div style="background: #eff3f6;box-shadow: 2px 2px 8px #07d562;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #111;font-size: 18px;font-weight: 500;"><span class="my-acc-add">...</span><img class="img-metamask" src="https://cdn.discordapp.com/attachments/572416318234427402/771703875602350090/metamask-2728406-2261817.png" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
+        <div style="background: #282b36;box-shadow: 2px 2px 8px #07d562;height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;"><span class="my-acc-add">...</span><img class="img-metamask" src="https://cdn.discordapp.com/attachments/572416318234427402/771703875602350090/metamask-2728406-2261817.png" style="width: 28px;margin-top: -3.7px;margin: 0px 1px 0px 10px;float: right;border-radius: 4px;"></div>
     </div>
 </div>
 `
