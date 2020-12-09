@@ -18,7 +18,7 @@ $('.shared-header')[0].innerHTML =
 
     <div class="mobile-exten" style="background: #282b36;box-shadow: 0px 0px 10px #2a230b;height: 60px;z-index: 1000000000;position: absolute;width: 100%;display: flex;align-items: center;display: none; height: auto;">
 
-        <ul class="border-t border-theme-24 py-7" style="color: red;">
+        <ul class="border-t border-theme-24 py-7" style="color: #07d562;">
              <li>
                 <a href="stake.html" class="menu">
                     <div class="menu__icon"> <i data-feather="layers"></i> </div>
@@ -43,14 +43,14 @@ $('.shared-header')[0].innerHTML =
 				<span class="trcmenu">
 					<a href="trcwebsite" class="menu ">
                     <div class="menu__icon"> <i data-feather="server"></i> </div>
-                    <div class="menu__title"> NAME </div>
+                    <div class="menu__title"> CSE Tron </div>
 					</a>
 				</span>
             </li> 
             <li>
                 <a href="refer.html" class="menu ">
                     <div class="menu__icon"> <i data-feather="users"></i> </div>
-                    <div class="menu__title"> Refer & FAQ </div>
+                    <div class="menu__title"> Refer</div>
                 </a>
             </li>   			
         </ul>
