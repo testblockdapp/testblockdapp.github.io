@@ -3,7 +3,7 @@ $('.shared-header')[0].innerHTML =
 <div class="mobile-menu md:hidden" style="border: 0;">
     <div class="mobile-menu-bar" style="background: #282b36; box-shadow: 0px 0px 10px #07d562; height: 60px;">
         <a class="flex mr-auto" onclick="openMenuM()">
-            <img alt="CSNE token" class="w-6" src="./img/logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #07d562);">
+            <img alt="CSE token" class="w-6" src="./img/logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #07d562);">
         </a>
 
         <div class="top-bar-boxed flex items-center">
