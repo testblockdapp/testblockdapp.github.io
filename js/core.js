@@ -17,7 +17,7 @@ $('.etherscan')[0].innerHTML = '<a href="https://etherscan.io/address/'+contract
 $('.telegram')[0].innerHTML = '<a href="'+telegram+'" target="_blank">Telegram</a>'
 $('.trcwebsite')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank">CSE-Tron</a>'
 // $('.ercwebsite')[0].innerHTML = '<a href="'+ercwebsite+'" target="_blank">NUI Gold</a>'
-$('.trcmenu')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="server"></i> </div><div class="menu__title"> CSN </div></a>'
+$('.trcmenu')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="server"></i> </div><div class="menu__title"> CSE Tron </div></a>'
 $('.telemenu')[0].innerHTML = '<a href="'+telegram+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="users"></i> </div><div class="menu__title"> Telegram </div></a>'
 
 var csnLogo = '<div class="flex items-center justify-center""><img src="./img/logo.png" style="display: inline-block;width: 300px; height: 175px;"></div>';
