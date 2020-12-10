@@ -152,7 +152,7 @@ function getUserBalance() {
         shouldPollResponse: false
     }).then(res => {
         user.balance = res
-        if ($('.your-token-balance-hd')[0]) $('.your-token-balance-hd')[0].innerHTML = "Your CSE balance: " + (user.balance / 100000000).toLocaleString()
+        if ($('.your-token-balance-hd')[0]) $('.your-token-balance-hd')[0].innerHTML = "Your CSE balance: " + (user.balance  / 10e50).toLocaleString()
     })
 }
 
