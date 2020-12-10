@@ -22,9 +22,9 @@ $('.telemenu')[0].innerHTML = '<a href="'+telegram+'" target="_blank" class="men
 
 var csnLogo = '<div class="flex items-center justify-center""><img src="./img/logo.png" style="display: inline-block;width: 300px; height: 175px;"></div>';
 var socialMediaSites = '<div class="flex items-center justify-center" style="border: 0;padding: 12px;">' +
-'<div class="contact-info social-media"><i class="fa fa-telegram" style="font-size:15px; color: #07d562; margin-right: 20px;"></i><a href="https://csetron.com/" target="blank">TELEGRAM</a></div>' 
+'<div class="contact-info social-media"><a href="https://t.me/csetron"target="blank" class="fa fa-telegram" style="font-size:25px; color: #07d562; margin-right: 0px;"></a></div>' 
  +
-'<div class="contact-info social-media" style="margin-left: 10px;"><i class="fa fa-twitter" style="font-size:15px; color: #07d562; margin-right: 20px;"></i><a href="https://twitter.com/CseTron" target="blank">TWITTER</a></div></div>';
+'<div class="contact-info social-media" style="margin-left: 10px;"><a href="https://twitter.com/CseTron" target="blank" class="fa fa-twitter" style="font-size:25px; color: #07d562; margin-right: 0px;"></a></div></div>';
 
 //Footer
 $("footer").append(csnLogo + socialMediaSites);
