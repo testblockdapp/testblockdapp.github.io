@@ -62,13 +62,13 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <div class="-intro-x hidden md:flex">
-            <img src="./img/logo.png" style="width: 6rem; margin-top: 1rem;">
+            <img src="./img/cseethlogo.png" style="width: 10rem; margin-top: 4rem;">
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #ecf590;"></span>
         </div>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
         <div class="-intro-x breadcrumb breadcrumb--light mr-auto" style="background: #282b36; border-left: 0px solid #040417;"> 
-        <span style="font-size: 20px;color: #a2a8a9;font-weight: 400;">CSE ETH</span></div>
+        <span style="font-size: 35px;color: #07d562;font-weight: 90;">CSE ETH</span></div>
         <!-- END: Breadcrumb -->
         <div style="background: #282b36;/* box-shadow: 2px 2px 8px #07d562; */height: 38px;border-radius: 6px;padding: 2px 0px 0px 10px;border: 3px solid #07d562;color: #a2a8a9;font-size: 18px;font-weight: 500;margin-right: 20px;"><span class="trcwebsite" style="padding-right: 10px;"><a href="" target="_blank">TRC Website</a></span></div>
 
