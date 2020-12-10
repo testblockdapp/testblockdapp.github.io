@@ -62,7 +62,7 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <div class="-intro-x hidden md:flex">
-            <img src="./img/cseethlogo.png" style="width: 10rem; margin-top: 4rem;">
+            <img src="./img/cseethlogo.png" style="width: 10rem; margin-top: 4.3rem;">
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #ecf590;"></span>
         </div>
         <!-- END: Logo -->
