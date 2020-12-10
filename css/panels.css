@@ -157,6 +157,8 @@ input[type=number] {
 
 .csne-text-red {
     color: #006700 !important;
+    padding-top: 300px;
+    padding-bottom: 300px;
 }
 
 .csne-button-white {

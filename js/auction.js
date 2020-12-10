@@ -111,7 +111,7 @@ function getPastLobbies() {
         $('.holder-list')[0].innerHTML +=
             `
         <div class="box px-4 py-4 mb-3 flex items-center zoom-in ${activeRow}"
-            style="cursor: auto; margin-bottom: 7px; color: #2eff3c; background: #A3A9AA;">
+            style="cursor: auto; margin-bottom: 2px; color: #2eff3c; background: #595959;">
 
             <div class="w-64 sm:w-auto truncate"
                 style="display:inline-block;width: 5%;text-align:center;font-weight: 900; color: #051242;">
