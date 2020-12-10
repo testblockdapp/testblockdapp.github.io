@@ -95,6 +95,7 @@ input[type=number] {
 .box-body {
     /* background: #aa8c2c !important; */
     border-radius: 9px !important;
+    
 }
 
 .row-body {
@@ -104,6 +105,8 @@ input[type=number] {
 .item-slm {
     background-color: #595959 !important;
     color: #454545 !important;
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
 }
 
 .item-sln {
@@ -171,6 +174,8 @@ input[type=number] {
 
 .csne-gray-background {
     background: #A3A9AA;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 .content {
