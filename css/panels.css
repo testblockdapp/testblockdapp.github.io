@@ -37,7 +37,7 @@
 }
 
 .bg-theme-101 {
-    background-color: #ff5822;
+    background-color: #07d562;
 }
 
 
@@ -46,7 +46,7 @@ body {
 }
 
 input {
-    background: #393822;
+    background: #111;
     
 }
 
@@ -100,13 +100,13 @@ input[type=number] {
 }
 
 .item-slm {
-    background-color: #8a7b2d !important;
-    color: #aa8c2c !important;
+    background-color: #595959 !important;
+    color: #454545 !important;
 }
 
 .item-sln {
-    background-color: #8a7b2d !important;
-    color: #aa8c2c !important;
+    background-color: #595959 !important;
+    color: #454545 !important;
 }
 
 .ro-head {
@@ -151,7 +151,7 @@ input[type=number] {
 }
 
 .csne-text-red {
-    color: #07d562 !important;
+    color: #006700 !important;
 }
 
 .csne-button-white {
