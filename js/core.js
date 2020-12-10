@@ -5,7 +5,7 @@ const DESI = 100000000
 const SUN = 1000000
 const zeroAddress = "0x0000000000000000000000000000000000000000"
 var mainContract, currentDay
-var contractAddress = "0xEf3E50fc734419D12ae25db6a3FF430a2537Ef38"
+var contractAddress = "0x9506c699846C1f4CB3B7FC559D86fCF9398b4243"
 var telegram = "https://t.me/csetron"
 var twitter = "https://twitter.com/CseTron"
 var trcwebsite = "https://csetron.com/"
@@ -152,7 +152,7 @@ function getUserBalance() {
         shouldPollResponse: false
     }).then(res => {
         user.balance = res
-        if ($('.your-token-balance-hd')[0]) $('.your-token-balance-hd')[0].innerHTML = "Your CSE balance: " + (user.balance  / 10e50).toLocaleString()
+        if ($('.your-token-balance-hd')[0]) $('.your-token-balance-hd')[0].innerHTML = "Your CSE balance: " + (user.balance / 100000000).toLocaleString()
     })
 }
 
