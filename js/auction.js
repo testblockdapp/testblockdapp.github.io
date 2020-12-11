@@ -207,7 +207,7 @@ function getLobbyData(day) {
                 $(`.fi-9-day-${day}`)[0].innerHTML =
                     `
                 <div style="">
-                    <button class="button w-24 shadow-md mr-1 mb-2 bg-theme-9 text-white"
+                    <button class="button w-24 shadow-md mr-1 mb-2 bg-theme-9 csne-button-white"
                         style="margin: 0;padding: 5px 10px;float: right;width: 85%; float: right;" onClick="collectLobby(${day})">COLLECT</button>
                 </div>
                 `

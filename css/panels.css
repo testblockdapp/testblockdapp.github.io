@@ -133,7 +133,7 @@ input[type=number] {
 .progress-bn {
     height: 7px;
     border-radius: 50px;
-    background: linear-gradient(90deg, rgba(103, 32, 201, 1) 0%, rgba(206, 45, 222, 1) 100%);
+    background: linear-gradient(90deg, rgba(7, 213, 98, 1) 0%, rgba(0, 103, 0, 1) 100%);
     box-shadow: 0px 0px 8px #07d562
 }
 
@@ -159,6 +159,10 @@ input[type=number] {
 
 .csne-text-red {
     color: #006700 !important;
+}
+
+.csne-text-black {
+    color: #111 !important;
 }
 
 .csne-button-white {

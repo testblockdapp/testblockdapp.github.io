@@ -3,7 +3,7 @@ $('.shared-header')[0].innerHTML =
 <div class="mobile-menu md:hidden" style="border: 0;">
     <div class="mobile-menu-bar" style="background: #282b36; box-shadow: 0px 0px 10px #07d562; height: 60px;">
         <a class="flex mr-auto" onclick="openMenuM()">
-            <img alt="CSE token" class="w-6" src="./img/logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #07d562);">
+        <img alt="CSE token" class="w-6" src="./img/logo.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #07d562);">
         </a>
 
         <div class="top-bar-boxed flex items-center">
@@ -62,7 +62,7 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <div class="-intro-x hidden md:flex">
-            <img src="./img/cseethlogo.png" style="width: 10rem; margin-top: 4.3rem;">
+        <a href="http://cseeth.com"><img src="./img/logo.png" style="width: 10rem; margin-top: 0rem;"></a>
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #ecf590;"></span>
         </div>
         <!-- END: Logo -->
