@@ -967,7 +967,7 @@ const DESI = 100000000
 const SUN = 1000000
 const zeroAddress = "0x0000000000000000000000000000000000000000"
 var mainContract, currentDay
-var contractAddress = "0x9506c699846C1f4CB3B7FC559D86fCF9398b4243"
+var contractAddress = "0xa76986c19da9BF7050beaFD5c0808245203BaB71"
 var telegram = "https://t.me/csetron"
 var twitter = "https://twitter.com/CseTron"
 var trcwebsite = "https://csetron.com/"
