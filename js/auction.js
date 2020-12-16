@@ -354,7 +354,7 @@ function getPastLobbiesMobile() {
         $('.holder-list')[0].innerHTML +=
             `
         <div class="box px-4 py-4 mb-3 flex items-center zoom-in ${activeRow}"
-            style="cursor: auto; margin-bottom: 7px;color: #051242; background: #aa8c2c;">
+            style="cursor: auto; margin-bottom: 7px;color: #051242; background: #595959;">
 
             <div class="w-64 sm:w-auto truncate"
                 style="display:inline-block;width: 5vw;text-align:center;font-weight: 900;color: #051242;">
