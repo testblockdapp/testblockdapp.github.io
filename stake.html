@@ -179,7 +179,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+			</div>
+			
 <!------------ STAKE INITIALIZE INFO END ---------->
 			<div class="col-span-12 lg:col-span-8 xxl:col-span-9">
 	<!------------ BONUSES ----------------------->
@@ -248,7 +249,7 @@
 									<div class="text-gray-600" 
 										style="margin: 0px auto;font-weight: 600; color: #051242;">4-Day Average:</div>
 									<div class="text-gray-600"
-										style="margin: 10px auto;font-weight: 600; color: #051242; font-size: 18px;">Jackpot Balance:</div>
+										style="margin: 10px auto;font-weight: 600; color: #051242; font-size: 18px;">Jackpot Balance:</div>Pays in:<div id="countbox"></div>
 								</div>
 								<div class="ml-5" style="">
 									<div class="text-gray-600 st-val-8"
@@ -261,6 +262,7 @@
 							</div>
 							
 						</div>
+						<div class="text-gray-600" style="text-align: center; color: #051242;">Jackpot is a way stakers will be rewarded for staking. Yes while longer pays better, we also have incentivized you doing what you do best, HODLing.</br>Every day for 21 days the Jackpot will fill up with 10% from each auction lobby entry and then be distributed equally to all current stake holders at the end of that 21 day period.</br>So develop strategies to always have stakes in on the jackpot day 😉 and you will benefit.</div>
 					</div>
 				</div>
 
@@ -460,7 +462,55 @@
 		getCurrentDay()
 		run_Stake()
 	</script>
-    <!-- END: JS Assets-->
+	<!-- END: JS Assets-->
+	<!--Jackpot Timer-->
+	<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+		<!--
+		
+		dateFuture = new Date(2021,0,16,12,00,30);
+		
+		function GetCount(){
+		
+				dateNow = new Date();                                                                        //grab current date
+				amount = dateFuture.getTime() - dateNow.getTime();                //calc milliseconds between dates
+				delete dateNow;
+		
+				// time is already past
+				if(amount < 0){
+						document.getElementById('countbox').innerHTML="Now!";
+				}
+				// date is still good
+				else{
+						days=0;hours=0;mins=0;secs=0;out="";
+		
+						amount = Math.floor(amount/1000);//kill the "milliseconds" so just secs
+		
+						days=Math.floor(amount/86400);//days
+						amount=amount%86400;
+		
+						hours=Math.floor(amount/3600);//hours
+						amount=amount%3600;
+		
+						mins=Math.floor(amount/60);//minutes
+						amount=amount%60;
+		
+						secs=Math.floor(amount);//seconds
+		
+						if(days != 0){out += days +" day"+((days!=1)?"s":"")+", ";}
+						if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
+						if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
+						out += secs +" seconds";
+						document.getElementById('countbox').innerHTML=out;
+		
+						setTimeout("GetCount()", 1000);
+				}
+		}
+		
+		window.onload=function(){GetCount();}//call when everything has loaded
+		
+		//-->
+		</script>
+
 </body>
 
 
