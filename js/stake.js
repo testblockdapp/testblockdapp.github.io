@@ -288,49 +288,49 @@ function renderMyStakes(data) {
             `
         <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #2eff3c; ">
+                style="cursor: auto; color: #005af2; ">
                 <div class="flex px-5 py-3"
-                    style="padding-left: .0rem; padding-right: .0rem; color: #2eff3c;">
+                    style="padding-left: .0rem; padding-right: .0rem; color: #005af2;">
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${item.lockedDay}</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${item.lockedDay + item.stakedDays}</span>
                     </div>
     
                     ${progress}
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 90vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 90vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)}</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 110vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 110vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakeShares) / DESI, 2)}</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 125vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 125vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="daily-bonus-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 125vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 125vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="dividends-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 100vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 100vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="interest-tn-${ii} inbox__item--highlight">--</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 100vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 100vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="interest-tm-${ii} inbox__item--highlight" id="${parseInt(stakedSuns) / DESI}">--</span>
                     </div>
     
@@ -522,7 +522,7 @@ function renderMyEndedStakes(data) {console.log("e", data)
             `
         <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #2eff3c; ">
+                style="cursor: auto; color: #005af2; ">
                 <div class="flex px-5 py-3" 
 					style="padding-left: .0rem; padding-right: .0rem;c5d6f3>
 
@@ -671,22 +671,22 @@ function renderMyStakesMobile(data) {
             `
         <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #2eff3c; ">
+                style="cursor: auto; color: #005af2; ">
                 <div class="flex px-5 py-3"
-                    style="padding-left: .0rem; padding-right: .0rem; color: #2eff3c;">
+                    style="padding-left: .0rem; padding-right: .0rem; color: #005af2;">
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #005af2;">
                         <span style="font-size: 8px;"class="inbox__item--highlight">${item.lockedDay + item.stakedDays+1}</span>
                     </div>
         
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #005af2;">
                         <span style="font-size: 8px;"class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #2eff3c;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #005af2;">
                         <span style="font-size: 8px;"class="dividends-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
     

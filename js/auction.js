@@ -100,7 +100,7 @@ function getPastLobbies() {
             `
         <div style="">
             <button class="button w-24 shadow-md mr-1 mb-2 bg-gray-200 text-gray-600"
-                style="margin: 0;padding: 5px 10px;width: 85%; cursor: auto; float: right; background: #111 !important; color: #07d562 !important;">ENDED</button>
+                style="margin: 0;padding: 5px 10px;width: 85%; cursor: auto; float: right; background: #111 !important; color: #4082f2 !important;">ENDED</button>
         </div>
         `
 
@@ -111,7 +111,7 @@ function getPastLobbies() {
         $('.holder-list')[0].innerHTML +=
             `
         <div class="box px-4 py-4 mb-3 flex items-center zoom-in ${activeRow}"
-            style="cursor: auto; margin-bottom: 2px; color: #2eff3c; background: #595959;">
+            style="cursor: auto; margin-bottom: 2px; color: #005af2; background: #595959;">
 
             <div class="w-64 sm:w-auto truncate"
                 style="display:inline-block;width: 5%;text-align:center;font-weight: 900; color: #051242;">

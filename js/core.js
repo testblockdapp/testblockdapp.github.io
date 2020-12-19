@@ -991,11 +991,11 @@ $('.trcwebsite')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank">CSE-Tr
 $('.trcmenu')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="server"></i> </div><div class="menu__title"> CSE Tron </div></a>'
 $('.telemenu')[0].innerHTML = '<a href="'+telegram+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="users"></i> </div><div class="menu__title"> Telegram </div></a>'
 
-var csnLogo = '<div class="flex items-center justify-center""><a href="http://cseeth.com"><img src="./img/logo.png" style="display: inline-block;width: 300px; height: 200px;"></div></a>';
+var csnLogo = '<div class="flex items-center justify-center""><a href="http://cseeth.com"><img src="./img/cseb.png" style="display: inline-block;width: 300px; height: 200px;"></div></a>';
 var socialMediaSites = '<div class="flex items-center justify-center" style="border: 0;padding: 12px;">' +
-'<div class="contact-info social-media"><a href="https://t.me/csetron"target="blank" class="fa fa-telegram" style="font-size:25px; color: #07d562; margin-right: 0px;"></a></div>' 
+'<div class="contact-info social-media"><a href="https://t.me/csetron"target="blank" class="fa fa-telegram" style="font-size:25px; color: #4082f2; margin-right: 0px;"></a></div>' 
  +
-'<div class="contact-info social-media" style="margin-left: 10px;"><a href="https://twitter.com/CseTron" target="blank" class="fa fa-twitter" style="font-size:25px; color: #07d562; margin-right: 0px;"></a></div></div>';
+'<div class="contact-info social-media" style="margin-left: 10px;"><a href="https://twitter.com/CseTron" target="blank" class="fa fa-twitter" style="font-size:25px; color: #4082f2; margin-right: 0px;"></a></div></div>';
 
 //Footer
 $("footer").append(csnLogo + socialMediaSites);
