@@ -94,7 +94,7 @@ input[type=number] {
 
 .box-body {
     /* background: #595959 !important; */
-    border-radius: 9px !important;
+    border-radius: 9px;
     
 }
 

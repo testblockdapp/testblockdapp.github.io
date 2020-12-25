@@ -17,6 +17,7 @@
     <!-- BEGIN: CSS Assets-->
     <link rel="stylesheet" href="css/panels.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/chartist.min.css" />
     <script src="js/kit.fontawesome.com/35a8a9b155.js" crossorigin="anonymous"></script>
     <!-- END: CSS Assets-->
 </head>
@@ -79,6 +80,57 @@
     </nav>
     <!-- END: Top Menu -->
     <!-- BEGIN: Content -->
+    <!-- BEGIN: Chart-->
+    <div class="content" style="background: #282b36; box-shadow: 0px 0px 14px #15151e8a;">
+
+        <div class="grid grid-cols-12 gap-6">
+
+            <div class="col-span-12 lg:col-span-12 flex lg:block flex-col-reverse" style="padding-top: 20px;">
+                <div class="intro-y inbox box mt-5" style="margin-top: 0px; background: #282b36;">
+
+                    <div class="box-body col-span-12 lg:col-span-5 box"
+                        style="background: #282b36; border-radius: 9px;box-shadow: 0px 0px 18px #1d1f2fb0;">
+                        <div class="box-header flex items-center p-5 border-b border-gray-200"
+                            style="padding-top: 7px;padding-bottom: 7px;padding-right: 8px;">
+                            <h2 class="font-medium text-base mr-auto" style="color: #4082f2; font-weight: 900;">
+                                Ethereum Dividends
+                            </h2>
+
+                            
+                            <button class="button w-24 mr-1 mb-2 bg-gray-200 corner-info"
+                                style="color: #4082f2"
+                                style="padding: 5px;"
+                                onClick="location.reload()">
+                                <i data-feather="refresh-ccw" class="mx-auto"></i>
+                            </button>
+
+                        </div>
+                        <div class="col-span-12 lg:col-span-12 flex lg:block flex-col-reverse" style="padding-top: 0px;">
+                            <div class="intro-y inbox box mt-5" style="margin-top: 0px; background: #282b36;">
+            
+                                <div class="box-body col-span-12 lg:col-span-5 box"
+                                    style="background: #a2a8a9; border-top-right-radius: 0px; border-top-left-radius: 0px; box-shadow: 0px 0px 18px #1d1f2fb0;">
+  
+                                    <div class="p-5" style="padding: 0;">
+            
+            
+                                        <div class="p-5" style="padding: 0; height:30vh">
+                                            <div class="ct-chart"></div>
+                                        </div>
+            
+            
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END: Chart-->
+
     <div class="content" style="background: #282b36; #4082f2; overflow: hidden;">
 
         <div class="modal" id="button-modal-enter-lobby" style="background: #282B36; border-radius: 9px;box-shadow: 0px 0px 18px #4082f2">
@@ -258,6 +310,9 @@
     <script src="js/auction.js"></script>
     <script src="js/core.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/dividends.js"></script>
+    <script src="js/chartist.min.js"></script>
+    <script src="js/chart_lt.js"></script>
 
     <!-- END: JS Assets-->
 </body>
