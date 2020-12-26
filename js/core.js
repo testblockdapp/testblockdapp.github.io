@@ -18,7 +18,7 @@ var contractAddress = "0x89074ceEf58061c123a81b5a25Ce893e96eEC830"
 var telegram = "https://t.me/csetron"
 var twitter = "https://twitter.com/CseTron"
 var trcwebsite = "https://csetron.com/"
-var ercwebsite = "https://cseeth.com/"
+var ercwebsite = "https://ethcse.com/"
 
 
 //Update Header
@@ -29,7 +29,7 @@ $('.trcwebsite')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank">CSE-Tr
 $('.trcmenu')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="server"></i> </div><div class="menu__title"> CSE Tron </div></a>'
 $('.telemenu')[0].innerHTML = '<a href="'+telegram+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="users"></i> </div><div class="menu__title"> Telegram </div></a>'
 
-var csnLogo = '<div class="flex items-center justify-center""><a href="http://cseeth.com"><img src="./img/cseb.png" style="display: inline-block;width: 300px; height: 200px;"></div></a>';
+var csnLogo = '<div class="flex items-center justify-center""><a href="http://ethcse.com"><img src="./img/cseb.png" style="display: inline-block;width: 300px; height: 200px;"></div></a>';
 var socialMediaSites = '<div class="flex items-center justify-center" style="border: 0;padding: 12px;">' +
 '<div class="contact-info social-media"><a href="https://t.me/csetron"target="blank" class="fa fa-telegram" style="font-size:25px; color: #4082f2; margin-right: 0px;"></a></div>' 
  +
