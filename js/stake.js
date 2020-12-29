@@ -511,37 +511,37 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 	`
        <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #051242;">
+                style="cursor: auto; color: #005af2;">
                 <div class="flex px-5 py-3" 
-					style="padding-left: .0rem; padding-right: .0rem; color: #051242;">
+					style="padding-left: .0rem; padding-right: .0rem; color: #c5d6f3;">
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-1"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #c5d6f3;">
                         <span class="inbox__item--highlight">${lockedDay}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-2"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #c5d6f3;">
                         <span class="inbox__item--highlight">${endDay}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-3"
-                        style="width: 70vw; text-align:center; font-weight: 900;  color: #051242;">
+                        style="width: 70vw; text-align:center; font-weight: 900;  color: #c5d6f3;">
                         <span class="inbox__item--highlight">${progress}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-4"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #051242;">
+                        style="width: 125vw; text-align:center; font-weight: 900;color: #c5d6f3;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)} NUG</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-5"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #051242;">
+                        style="width: 125vw; text-align:center; font-weight: 900;color: #c5d6f3;">
                         <span class="inbox__item--highlight">${abbreviate_number(dividends / 10e17, 6)} ETH</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-6"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #051242;>
+                        style="width: 125vw; text-align:center; font-weight: 900;color: #c5d6f3;>
                         <span class="inbox__item--highlight">${abbreviate_number(stakeReturn / DESI, 2)} NUG</span>
                     </div>
 
