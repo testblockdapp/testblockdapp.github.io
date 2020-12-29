@@ -516,7 +516,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 					style="padding-left: .0rem; padding-right: .0rem; color: #005af2;">
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-1"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
+                        style="width: 45vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${lockedDay}</span>
                     </div>
 
@@ -531,17 +531,17 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-4"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #85B6FF;">
+                        style="width: 140vw; text-align:center; font-weight: 900;color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)} CSE</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-5"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #85B6FF;">
+                        style="width: 100vw; text-align:center; font-weight: 900;color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(dividends / 10e17, 6)} ETH</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-6"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #85B6FF;>
+                        style="width: 125vw; text-align:center; font-weight: 900;color: #85B6FF; padding-right: 2rem;">
                         <span class="inbox__item--highlight">${abbreviate_number(stakeReturn / DESI, 2)} CSE</span>
                     </div>
 
