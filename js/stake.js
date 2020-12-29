@@ -486,7 +486,7 @@ function getMyEndedStakes() {
 			i++
 		}
 		if(i == 0){
-			$('.ended-stake-loading')[0].innerHTML = "No ended stakes! Stake your NUG!"
+			$('.ended-stake-loading')[0].innerHTML = "No ended stakes! Stake your CSE!"
 		}
 	})
 	i = 0
