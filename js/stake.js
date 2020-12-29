@@ -532,7 +532,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-4"
                         style="width: 125vw; text-align:center; font-weight: 900;color: #c5d6f3;">
-                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)} NUG</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)} CSE</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-5"
@@ -542,7 +542,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-6"
                         style="width: 125vw; text-align:center; font-weight: 900;color: #c5d6f3;>
-                        <span class="inbox__item--highlight">${abbreviate_number(stakeReturn / DESI, 2)} NUG</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(stakeReturn / DESI, 2)} CSE</span>
                     </div>
 
                 </div>

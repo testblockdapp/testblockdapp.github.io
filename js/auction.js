@@ -295,7 +295,7 @@ function mobileAuctionAdjuster(){
 
     $('.fi-1')[0].innerHTML = "#" + currentDay //Day
     $('.fi-1')[0].style.width = "5vw"
-    $('.fi-2')[0].innerHTML = abbreviate_number(calcDaysLobbyPayout(currentDay) / DESI, 2) //Total NUG Available
+    $('.fi-2')[0].innerHTML = abbreviate_number(calcDaysLobbyPayout(currentDay) / DESI, 2) //Total CSE Available
     $('.fi-2')[0].style.width = "16vw"
 	
 	//negate useless mobile info for current day
