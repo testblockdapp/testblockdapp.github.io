@@ -3,7 +3,7 @@ $('.shared-header')[0].innerHTML =
 <div class="mobile-menu md:hidden" style="border: 0;">
     <div class="mobile-menu-bar" style="background: #282b36; box-shadow: 0px 0px 10px #4082f2; height: 60px;">
         <a class="flex mr-auto" onclick="openMenuM()">
-        <img alt="CSE token" class="w-6" src="./img/cseb.png" style="width: 10vw;filter: drop-shadow(0px 0px 3px #4082f2);">
+        <img alt="CSE token" class="w-6" src="./img/cse-ethb.png" style="width: 10vw;height: 10vw;filter: drop-shadow(0px 0px 3px #4082f2);">
         </a>
 
         <div class="top-bar-boxed flex items-center">
@@ -26,7 +26,7 @@ $('.shared-header')[0].innerHTML =
                 </a>
             </li>
             <li>
-                <a href="auction.html" class="menu">
+                <a href="index.html" class="menu">
                     <div class="menu__icon"> <i data-feather="server"></i> </div>
                     <div class="menu__title"> Auction </div>
                 </a>

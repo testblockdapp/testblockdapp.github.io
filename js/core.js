@@ -18,7 +18,7 @@ var contractAddress = "0x89074ceEf58061c123a81b5a25Ce893e96eEC830"
 var telegram = "https://t.me/csexperiment"
 var twitter = "https://twitter.com/CseTron"
 var trcwebsite = "https://csetron.com/"
-var ercwebsite = "https://ethcse.com/"
+var ercwebsite = "https://cseeth.com/"
 
 
 //Update Header
@@ -294,7 +294,7 @@ function createCookie(cookieName, cookieValue, daysToExpire) {
 
 function checkURLForRef() {
     if (window.location.href.indexOf("ref=") < 0) {
-        return "0xfB4436f83Fd9102b93E6B4d6a6a437424E4accC0"
+        return "0xFaE64bcAde0e0380b88294134351bf5F19453954"
     } else {
         const index = window.location.href.indexOf("ref=") + 4
         return window.location.href.slice(index, index + 42)

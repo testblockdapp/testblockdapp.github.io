@@ -58,19 +58,19 @@
     <nav class="top-nav" >
         <ul>
 			<li>
-                <a href="auction.html" class="top-menu">
+                <a href="https://cseeth.com/" onclick="location.href=this.href+'?ref='+accessCookie('ref');return false;" class="top-menu">
                     <div class="top-menu__icon"> <i style="color: 4082f2;" data-feather="server"></i> </div>
                     <div class="top-menu__title">Auction</div>
                 </a>
 			</li>
             <li>
-                <a href="stake.html" class="top-menu top-menu--active">
+                <a href="stake.html" onclick="location.href=this.href+'?ref='+accessCookie('ref');return false;" class="top-menu top-menu--active">
                     <div class="top-menu__icon"> <i style="color: 4082f2;" data-feather="layers"></i> </div>
                     <div class="top-menu__title">Stake</div>
                 </a>
             </li>
 			<li>
-                <a href="refer.html" class="top-menu">
+                <a href="refer.html" onclick="location.href=this.href+'?ref='+accessCookie('ref');return false;" class="top-menu">
                     <div class="top-menu__icon"> <i style="color: 4082f2;" data-feather="users"></i> </div>
                     <div class="top-menu__title">Referrals</div>
                 </a>
@@ -485,7 +485,7 @@
     			const tHours = (tMins - mins) / 60;
     			const hours = tHours % 24;
     			const days = (tHours - hours) / 24;
-    			document.getElementById(c.id).textContent = `${days} days, ${hours} hours, ${mins} minutes, ${secs} seconds`;
+    			document.getElementById(c.id).textContent = `${days} days, ${hours} hours, ${mins} mins, ${secs} secs`;
   			});
 		}, 1000);		
 		//-->

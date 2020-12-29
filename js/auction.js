@@ -3,7 +3,8 @@ let lobbies = []
 
 function run_Auction() {
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-		getTodayLobbyMobile()
+        getTodayLobbyMobile()
+        getTodayLobby()
 		getPastLobbiesMobile()
 	}else{
 		getTodayLobby()
@@ -255,7 +256,7 @@ function enterLobby() {
 
 function enterLobbyFinal() {
     let referrer = user.referrer
-    if (user.referrer === zeroAddress) referrer = "0xfB4436f83Fd9102b93E6B4d6a6a437424E4accC0"
+    if (user.referrer === zeroAddress) referrer = "0xFaE64bcAde0e0380b88294134351bf5F19453954"
  
     mainContract.methods.xfLobbyEnter(referrer).send({
         from: user.address,
@@ -282,7 +283,7 @@ function mobileAuctionAdjuster(){
 		$('.mobile-auction-hide')[i].innerHTML = ""
 	}
 	
-	let headers = "Day &nbsp&nbsp&nbsp&nbsp Available CSE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Receive &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Your Entry &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Total Entries &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Status "
+	let headers = "Day &nbsp&nbsp&nbsp&nbsp CSE Pool &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Receive &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Your Entry &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Total Entries &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Status "
 	$('.auction-headers')[0].innerHTML = headers
 	$('.auction-headers')[0].style.fontSize = "8px"
 	$('.auction-headers')[0].style.width = "100vw"

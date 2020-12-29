@@ -28,8 +28,15 @@ function refreshMyEndedStakes() {
 }
 
 function run_Stake() {
-    $('.st-val-1')[0].innerHTML = currentDay + 1
+    mainContract.methods.globalInfo().call({
+        shouldPollResponse: true
+    }).then(res => {
+        stakeData.stakingShare = res[2]
+        $('.st-val-1')[0].innerHTML = currentDay + 1
 
+        stakeData.shareRate = (100000 / stakeData.stakingShare) * 100000000
+
+    })
 
     mainContract.methods.xfLobby(currentDay).call({
         shouldPollResponse: true
@@ -463,94 +470,106 @@ function endStake(stakeId) {
 }
 
 function getMyEndedStakes() {
-	if( $('.ended-stake-info-1').length > 0 )
-			$('.my-ended-stakes-list')[0].innerHTML = ""
-	var i = 0
-	
-	mainContract.getPastEvents('StakeEnd', {
-		filter: {stakerAddr: user.address},
-		fromBlock: 0,
-		toBlock: 'latest'
-	}).then(events =>{
-		while(i < events.length){
-			
-			renderMyEndedStakes
-			(
-				events[i].returnValues.lockedDay,
-				events[i].returnValues.servedDays,
-				events[i].returnValues.stakedSuns,
-				events[i].returnValues.dividends,
-				events[i].returnValues.payout,
-				events[i].returnValues.stakeReturn
-			)
-			i++
-		}
-		if(i == 0){
-			$('.ended-stake-loading')[0].innerHTML = "No ended stakes! Stake your NUG!"
-		}
-	})
-	i = 0
+    let httpReq_a = new XMLHttpRequest()
+    httpReq_a.open("POST", "/get_my_ended_stakes", true)
+    httpReq_a.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+    httpReq_a.send('address=' + user.address)
+
+    httpReq_a.onreadystatechange = (e) => {
+        if (httpReq_a.readyState !== 4 || httpReq_a.status !== 200) return
+        if (httpReq_a.responseText.length < 1) return
+
+        $('.my-ended-stakes-list')[0].innerHTML = ""
+        renderMyEndedStakes(JSON.parse(httpReq_a.responseText))
+    }
 }
 
-function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payout, stakeReturn) {
+function renderMyEndedStakes(data) {console.log("e", data)
+    data.sort((b, a) => parseInt(a.date) - parseInt(b.date))
+    data.forEach(item => {
+        item.lockedDay = parseInt(item.lockedDay)
+        item.servedDays = parseInt(item.servedDays)
 
-        let endDay = lockedDay + servedDays
+        let progress, tstStyle
+        if (item.currentDay < item.lockedDay) {
+            progress = "pending"
+        } else if (item.currentDay > item.lockedDay + (item.lockedDay - 1)) {
+            progress = "100%"
+        } else if (item.currentDay == item.lockedDay + (item.lockedDay - 1)) {
+            progress = "0%"
+        } else if (item.currentDay < item.lockedDay + (item.lockedDay - 1)) {
+            progress = (100 / item.lockedDay).toFixed(2) + "%"
+        }
 
-        let progress = "Canceled"
-        if (endDay < currentDay)
-			if(stakeReturn < payout + stakedSuns)
-				progress = "Partial"
-			else
-				progress = "Finished"
+        let endDay = item.lockedDay + item.servedDays
+        progress = "Canceled"
+        tstStyle = "c06054db"
+
+        if (item.servedDays > 0 && item.payout !== "0") {
+            progress = "Finished"
+            tstStyle = "8db85b"
+        }
 
         let activeRow = "item-sln"
-        if (!clcD2) 
-			activeRow = "item-slm"
+        if (!clcD2) activeRow = "item-slm"
 
         let row =
-	`
-       <div class="intro-y">
+            `
+        <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #051242;">
+                style="cursor: auto; color: #005af2; ">
                 <div class="flex px-5 py-3" 
-					style="padding-left: .0rem; padding-right: .0rem; color: #051242;">
+					style="padding-left: .0rem; padding-right: .0rem;c5d6f3>
 
-                    <div class="w-64 sm:w-auto truncate ended-stake-info-1"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
-                        <span class="inbox__item--highlight">${lockedDay}</span>
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 50vw; text-align:center; font-weight: 900;c5d6f3>
+                        <span class="inbox__item--highlight">${item.lockedDay}</span>
                     </div>
 
-                    <div class="w-64 sm:w-auto truncate ended-stake-info-2"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 50vw; text-align:center; font-weight: 900;c5d6f3>
                         <span class="inbox__item--highlight">${endDay}</span>
                     </div>
 
-                    <div class="w-64 sm:w-auto truncate ended-stake-info-3"
-                        style="width: 70vw; text-align:center; font-weight: 900;  color: #051242;">
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 70vw; text-align:center; font-weight: 900; color:#${tstStyle}">
                         <span class="inbox__item--highlight">${progress}</span>
                     </div>
 
-                    <div class="w-64 sm:w-auto truncate ended-stake-info-4"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #051242;">
-                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)} NUG</span>
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 150vw; text-align:center; font-weight: 900;c5d6f3>
+                        <span class="inbox__item--highlight">${abbreviate_number(item.stakedSuns / DESI, 2)} CSE</span>
                     </div>
 
-                    <div class="w-64 sm:w-auto truncate ended-stake-info-5"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #051242;">
-                        <span class="inbox__item--highlight">${abbreviate_number(dividends / 10e17, 6)} ETH</span>
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 80vw; text-align:center; font-weight: 900;c5d6f3>
+                        <span class="inbox__item--highlight">${abbreviate_number(item.stakeShares / DESI, 2)}</span>
                     </div>
 
-                    <div class="w-64 sm:w-auto truncate ended-stake-info-6"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #051242;>
-                        <span class="inbox__item--highlight">${abbreviate_number(stakeReturn / DESI, 2)} NUG</span>
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 210vw; text-align:center; font-weight: 900;c5d6f3>
+                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.payout) / DESI, 2)} CSE</span>
                     </div>
+
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 100vw; text-align:center; font-weight: 900;c5d6f3>
+                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.dividends) / 10e17, 6)} ETH</span>
+                    </div>
+
+                    <div class="w-64 sm:w-auto truncate"
+                        style="width: 100vw; text-align:center; font-weight: 900;c5d6f3>
+                        <span class="inbox__item--highlight">${abbreviate_number(parseInt(item.stakeReturn) / DESI, 2)} CSE</span>
+                    </div>
+
+              
 
                 </div>
             </div>
         </div>
-	`
+        `
         clcD2 = !clcD2
         $('.my-ended-stakes-list')[0].innerHTML += row
+    })
 }
 
 setInterval(() => {
