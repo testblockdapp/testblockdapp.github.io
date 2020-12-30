@@ -504,8 +504,12 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 				progress = "Finished"
 
         let activeRow = "item-sln"
+         if (!clcD2) 
         if (!clcD2) 
-			activeRow = "item-slm"
+         if (!clcD2) 
+        if (!clcD2) 
+         if (!clcD2) 
+		    activeRow = "item-slm"
 
         let row =
 	`
@@ -589,7 +593,8 @@ function mobileStakeAdjuster(){
 	//Mobile Active Stakes Header Adjustments
 	for(let i = 0; i < $('.mobile-stake-hide').length; i++){
 		$('.mobile-stake-hide')[i].innerHTML = ""
-	}
+    }
+    $('.ended-stake-header')[0].innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Start &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp End &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ETH Earned"
 	$('.stake-headers')[0].innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Collect On Day &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Staked CSE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Divs Earned"
 	$('.mobile-stake-resize')[0].style.width = "75vw"
 	$('.mobile-stake-resize')[0].style.fontSize = "8px"
