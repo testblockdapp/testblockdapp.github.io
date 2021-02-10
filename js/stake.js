@@ -34,7 +34,7 @@ function run_Stake() {
     mainContract.methods.xfLobby(currentDay).call({
         shouldPollResponse: true
     }).then(res => {
-        $('.st-val-8')[0].innerHTML = abbreviate_number(res / 10e17, 2) + " ETH"
+        $('.st-val-8')[0].innerHTML = abbreviate_number(res / 10e17, 2) + " BNB"
     })
 
     getMyEndedStakes()
@@ -142,10 +142,11 @@ setInterval(() => {
 	}
 }, 250)
 
-function doStake() {
+async function doStake() {
     $('.btn-usertransfer-load')[0].style.display = "block"
     $('.btn-usertransfer-txt')[0].innerHTML = ""
-
+    let gasPrice=await web3.eth.getGasPrice();
+    console.log("web3====>"+gasPrice);
     mainContract.methods.balanceOf(user.address).call({
         shouldPollResponse: true
     }).then(res => {
@@ -156,7 +157,9 @@ function doStake() {
         } else {
             mainContract.methods.stakeStart(parseFloat($('.stake-inp-amount')[0].value) * DESI, parseInt($('.stake-inp-day')[0].value)).send({
                 from: user.address,
-                shouldPollResponse: false
+                shouldPollResponse: false,
+                gasPrice: web3.utils.toHex(gasPrice),
+                gasLimit:720000, 
             }).then(res => {
                 displayAlert(1, `Successfully staked ${parseFloat($('.stake-inp-amount')[0].value)} CSE for ${parseInt($('.stake-inp-day')[0].value)} days.`)
                 refreshMyStakes()
@@ -370,7 +373,7 @@ function calcDividends(elm, lockedDay, stakedDays, stakeShares) {
                         userShares = 1
                       }
                     addUpDivs += ( (divs / 1e18) * 0.97 ) * shares / userShares
-                    $(`.${elm}`)[0].innerHTML = abbreviate_number((addUpDivs), 7) + " ETH"
+                    $(`.${elm}`)[0].innerHTML = abbreviate_number((addUpDivs), 7) + " BNB"
                 }
             })
 
@@ -456,7 +459,7 @@ function endStake(stakeId) {
         }).then(res => {
             refreshMyStakes()
             setTimeout(() => {
-              //  refreshMyEndedStakes()
+                //  refreshMyEndedStakes()
             }, 1500)
         })
     }
@@ -541,7 +544,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-5"
                         style="width: 100vw; text-align:center; font-weight: 900;color: #85B6FF;">
-                        <span class="inbox__item--highlight">${abbreviate_number(dividends / 10e17, 6)} ETH</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(dividends / 10e17, 6)} BNB</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-6"
@@ -584,7 +587,7 @@ function getLobbyData(day) {
 		shouldPollResponse: true,
 		}).then(res => {
 			pstEntries += (parseInt(res) / 1e18)
-			$('.st-val-9')[0].innerHTML = "~" + abbreviate_number(pstEntries / 4, 5) + " ETH"
+			$('.st-val-9')[0].innerHTML = "~" + abbreviate_number(pstEntries / 4, 5) + " BNB"
 	})
 }
 
@@ -594,7 +597,7 @@ function mobileStakeAdjuster(){
 	for(let i = 0; i < $('.mobile-stake-hide').length; i++){
 		$('.mobile-stake-hide')[i].innerHTML = ""
     }
-    $('.ended-stake-header')[0].innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Start &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp End &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ETH Earned"
+    $('.ended-stake-header')[0].innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Start &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp End &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp BNB Earned"
 	$('.stake-headers')[0].innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Collect On Day &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Staked CSE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Divs Earned"
 	$('.mobile-stake-resize')[0].style.width = "75vw"
 	$('.mobile-stake-resize')[0].style.fontSize = "8px"
