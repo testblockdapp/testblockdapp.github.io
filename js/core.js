@@ -18,7 +18,7 @@ var contractAddress = "0x709bEC01752949773A2Ab255098E4B020640C1D5"
 var telegram = "https://t.me/csexperiment"
 var twitter = "https://twitter.com/CseTron"
 var trcwebsite = "https://csetron.com/"
-var ercwebsite = "https://cseeth.com/"
+var ercwebsite = "https://testblockdapp.github.io/"
 
 
 //Update Header
