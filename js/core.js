@@ -12,7 +12,7 @@ const DESI = 100000000
 const SUN = 1000000
 const zeroAddress = "0x0000000000000000000000000000000000000000"
 var mainContract, currentDay
-var contractAddress = "0x25a00A0A7fA7D642aeE04F2f3E235E1ee17EB227"
+var contractAddress = "0xc9a70D265C2dabE7B7Ea372Efd315509a21081c2"
 var telegram = "https://t.me/csexperiment"
 var twitter = "https://twitter.com/CseTron"
 var trcwebsite = "https://csetron.com/"
@@ -20,18 +20,18 @@ var ercwebsite = "https://testblockdapp.github.io/"
 
 
 //Update Header
-$('.etherscan')[0].innerHTML = '<a href="https://etherscan.io/address/'+contractAddress+'" target="_blank">Etherscan</a>'
+$('.etherscan')[0].innerHTML = '<a href="https://testnet.bscscan.com/address/'+contractAddress+'" target="_blank">Contract</a>'
 $('.telegram')[0].innerHTML = '<a href="'+telegram+'" target="_blank">Telegram</a>'
 $('.trcwebsite')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank">CSE-Tron</a>'
 // $('.ercwebsite')[0].innerHTML = '<a href="'+ercwebsite+'" target="_blank">NUI Gold</a>'
 $('.trcmenu')[0].innerHTML = '<a href="'+trcwebsite+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="server"></i> </div><div class="menu__title"> CSE Tron </div></a>'
 $('.telemenu')[0].innerHTML = '<a href="'+telegram+'" target="_blank" class="menu"><div class="menu__icon"><i data-feather="users"></i> </div><div class="menu__title"> Telegram </div></a>'
 
-var csnLogo = '<div class="flex items-center justify-center""><a href="http://ethcse.com"><img src="./img/cseb.png" style="display: inline-block;width: 300px; height: 200px;"></div></a>';
+var csnLogo = '<div class="flex items-center justify-center""><a href="http://testblockdapp.github.io"><img src="./img/cseb.png" style="display: inline-block;width: 300px; height: 200px;"></div></a>';
 var socialMediaSites = '<div class="flex items-center justify-center" style="border: 0;padding: 12px;">' +
-'<div class="contact-info social-media"><a href="https://t.me/csexperiment"target="blank" class="fa fa-telegram" style="font-size:25px; color: #4082f2; margin-right: 0px;"></a></div>' 
+'<div class="contact-info social-media"><a href="https://t.me/csexperiment"target="blank" class="fa fa-telegram" style="font-size:25px; color: #f23737; margin-right: 0px;"></a></div>' 
  +
-'<div class="contact-info social-media" style="margin-left: 10px;"><a href="https://twitter.com/CseTron" target="blank" class="fa fa-twitter" style="font-size:25px; color: #4082f2; margin-right: 0px;"></a></div></div>';
+'<div class="contact-info social-media" style="margin-left: 10px;"><a href="https://twitter.com/CseTron" target="blank" class="fa fa-twitter" style="font-size:25px; color: #f23737; margin-right: 0px;"></a></div></div>';
 
 //Footer
 $("footer").append(csnLogo + socialMediaSites);

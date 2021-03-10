@@ -101,7 +101,7 @@ function getPastLobbies() {
             `
         <div style="">
             <button class="button w-24 shadow-md mr-1 mb-2 bg-gray-200 text-gray-600"
-                style="margin: 0;padding: 5px 10px;width: 85%; cursor: auto; float: right; background: #111 !important; color: #4082f2 !important;">ENDED</button>
+                style="margin: 0;padding: 5px 10px;width: 85%; cursor: auto; float: right; background: #111 !important; color: #f23737 !important;">ENDED</button>
         </div>
         `
 
@@ -115,37 +115,37 @@ function getPastLobbies() {
             style="cursor: auto; margin-bottom: 2px; color: #005af2; background: #595959;">
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 5%;text-align:center;font-weight: 900; color: #051242;">
+                style="display:inline-block;width: 5%;text-align:center;font-weight: 900; color: #000002;">
                 <span class="fi-1-day-${i - 1} inbox__item--highlight">#${i - 1}</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block; width: 14%; text-align:center; font-weight: 900; color: #051242;">
+                style="display:inline-block; width: 14%; text-align:center; font-weight: 900; color: #000002;">
                 <span class=fi-2-day-${i - 1} inbox__item--highlight">${abbreviate_number(calcDaysLobbyPayout(i - 1) / DESI, 2)}</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 15.0%;text-align:center;font-weight: 900; color: #051242;">
+                style="display:inline-block;width: 15.0%;text-align:center;font-weight: 900; color: #000002;">
                 <span class="fi-4-day-${i - 1} inbox__item--highlight">--</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 16.0%;text-align:center;font-weight: 900; color: #051242;">
+                style="display:inline-block;width: 16.0%;text-align:center;font-weight: 900; color: #000002;">
                 <span class=fi-5-day-${i - 1} inbox__item--highlight">--</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 15.5%;text-align:center;font-weight: 900; color: #051242;">
+                style="display:inline-block;width: 15.5%;text-align:center;font-weight: 900; color: #000002;">
                 <span class="fi-6-day-${i - 1} inbox__item--highlight" style="padding-right: 0%;">--</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 15.5%;text-align:center;font-weight: 900; color: #051242;">
+                style="display:inline-block;width: 15.5%;text-align:center;font-weight: 900; color: #000002;">
                 <span class="fi-8-day-${i - 1} inbox__item--highlight">--</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 15.5%;text-align:center;font-weight: 900; color: #051242;">
+                style="display:inline-block;width: 15.5%;text-align:center;font-weight: 900; color: #000002;">
                 <span class="fi-10-day-${i - 1} inbox__item--highlight">--</span>
             </div>
 
@@ -355,40 +355,40 @@ function getPastLobbiesMobile() {
         $('.holder-list')[0].innerHTML +=
             `
         <div class="box px-4 py-4 mb-3 flex items-center zoom-in ${activeRow}"
-            style="cursor: auto; margin-bottom: 7px;color: #051242; background: #595959;">
+            style="cursor: auto; margin-bottom: 7px;color: #000002; background: #595959;">
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 5vw;text-align:center;font-weight: 900;color: #051242;">
+                style="display:inline-block;width: 5vw;text-align:center;font-weight: 900;color: #000002;">
                 <span class="fi-1-day-${i - 1} inbox__item--highlight">#${i - 1}</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block; width: 16vw; text-align:center; font-weight: 900; color: #051242;">
+                style="display:inline-block; width: 16vw; text-align:center; font-weight: 900; color: #000002;">
                 <span class="fi-2-day-${i - 1} inbox__item--highlight">${abbreviate_number(calcDaysLobbyPayout(i - 1) / DESI, 2)}</span>
             </div>
 
             <div class="fi-4-div-${i - 1} w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 0vw;text-align:center;font-weight: 900;color: #051242;">
+                style="display:inline-block;width: 0vw;text-align:center;font-weight: 900;color: #000002;">
                 <span class="fi-4-day-${i - 1} inbox__item--highlight">..</span>
             </div>
 
             <div class="fi-5-div-${i - 1} w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 0vw;text-align:center;font-weight: 900;color: #051242;">
+                style="display:inline-block;width: 0vw;text-align:center;font-weight: 900;color: #000002;">
                 <span class="fi-5-day-${i - 1} inbox__item--highlight">..</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 16vw;text-align:center;font-weight: 900;color: #051242;">
+                style="display:inline-block;width: 16vw;text-align:center;font-weight: 900;color: #000002;">
                 <span class="fi-6-day-${i - 1} inbox__item--highlight"">..</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 16vw;text-align:center;font-weight: 900;color: #051242;">
+                style="display:inline-block;width: 16vw;text-align:center;font-weight: 900;color: #000002;">
                 <span class="fi-8-day-${i - 1} inbox__item--highlight"">..</span>
             </div>
 
             <div class="w-64 sm:w-auto truncate"
-                style="display:inline-block;width: 16vw;text-align:center;font-weight: 900;color: #051242;">
+                style="display:inline-block;width: 16vw;text-align:center;font-weight: 900;color: #000002;">
                 <span class="fi-10-day-${i - 1} inbox__item--highlight"">..</span>
             </div>
 

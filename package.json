@@ -1,7 +1,7 @@
 {
   "name": "ethcse",
   "version": "1.0.0",
-  "description": "CSE Eth",
+  "description": "CSE Binance",
   "main": "index.js",
   "scripts": {
     "server": "nodemon server.js --ignore 'client/'",

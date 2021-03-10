@@ -38,7 +38,7 @@ function rnChartLt() {
             if (_clcDays.length == 0) {
                 drawChartLt(days, values)
                 setTimeout(() => {
-                    $('.ct-line')[0].style.stroke = "#005af2"
+                    $('.ct-line')[0].style.stroke = "#F23737"
                     // $('.ct-area')[0].style.stroke = "#ff1300"
 
                     let dts = $('.ct-vertical')

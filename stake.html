@@ -59,19 +59,19 @@
         <ul>
 			<li>
                 <a href="index.html" onclick="location.href=this.href+'?ref='+accessCookie('ref');return false;" class="top-menu">
-                    <div class="top-menu__icon"> <i style="color: 4082f2;" data-feather="server"></i> </div>
+                    <div class="top-menu__icon"> <i style="color: f23737;" data-feather="server"></i> </div>
                     <div class="top-menu__title">Auction</div>
                 </a>
 			</li>
             <li>
                 <a href="stake.html" onclick="location.href=this.href+'?ref='+accessCookie('ref');return false;" class="top-menu top-menu--active">
-                    <div class="top-menu__icon"> <i style="color: 4082f2;" data-feather="layers"></i> </div>
+                    <div class="top-menu__icon"> <i style="color: f23737;" data-feather="layers"></i> </div>
                     <div class="top-menu__title">Stake</div>
                 </a>
             </li>
 			<li>
                 <a href="refer.html" onclick="location.href=this.href+'?ref='+accessCookie('ref');return false;" class="top-menu">
-                    <div class="top-menu__icon"> <i style="color: 4082f2;" data-feather="users"></i> </div>
+                    <div class="top-menu__icon"> <i style="color: f23737;" data-feather="users"></i> </div>
                     <div class="top-menu__title">Referrals</div>
                 </a>
             </li>
@@ -79,7 +79,7 @@
     </nav>
     <!-- END: Top Menu -->
     <!-- BEGIN: Content -->
-    <div class="content" style="background: #282b36;box-shadow: 0px 0px 14px #1414198a;">
+    <div class="content" style="background: #000001;box-shadow: 0px 0px 14px #1414198a;">
         <div class="grid grid-cols-12 gap-6">
 		
 <!---------- STAKE INITIALIZE INFO ------------->
@@ -93,11 +93,11 @@
                         <div class="box-header flex items-center p-5 border-b"
                             style="padding-top: 7px;padding-bottom: 7px;padding-right: 8px;">
 							
-                            <h2 class="font-medium text-base mr-auto" style="color: #4082f2; font-weight: 900;">
+                            <h2 class="font-medium text-base mr-auto" style="color: #f23737; font-weight: 900;">
                                 Stake
                             </h2>
 
-                            <button class="your-token-balance-hd corner-info button w-24 mr-1 mb-2 bg-gray-200 text-gray-600" style="color: #4082f2; font-weight: 900;" >Your CSE balance: --
+                            <button class="your-token-balance-hd corner-info button w-24 mr-1 mb-2 bg-gray-200 text-gray-600" style="color: #f23737; font-weight: 900;" >Your CSE balance: --
 
                             </button>
 
@@ -107,7 +107,7 @@
                                 <div class="" style="padding-top: 30px; text-align: center;">
 
                                     <div class="intro-y col-span-12 sm:col-span-6">
-                                        <div style="font-weight: 900;color: #051242; padding-bottom: 3px;margin: 0px auto;text-align: center;margin: 0px auto;"> Amount to
+                                        <div style="font-weight: 900;color: #000002; padding-bottom: 3px;margin: 0px auto;text-align: center;margin: 0px auto;"> Amount to
                                             Stake:</div>
                                         <input type="number" class="input w-full border flex-1 stake-inp-amount text-gray-700"
                                             oninput="stakeChangeAmount()" placeholder="0"
@@ -116,11 +116,11 @@
                                             url('./img/cseb.png') no-repeat right 8px center;
                                             background-size: 24px;
                                             background-color: #D9DFE0;
-                                            border: 3px solid #4082f2;">
+                                            border: 3px solid #f23737;">
                                     </div>
 
                                     <div class="intro-y col-span-12 sm:col-span-6">
-                                        <div style="font-weight: 900;color: #051242; padding-bottom: 3px; text-align: center;margin: 0px auto;"> Days to
+                                        <div style="font-weight: 900;color: #000002; padding-bottom: 3px; text-align: center;margin: 0px auto;"> Days to
                                             Stake (MAX: 365):</div>
                                         <input type="number" class="input w-full border flex-1 stake-inp-day text-gray-700"
                                             oninput="stakeChangeDays()" placeholder="0" 
@@ -129,7 +129,7 @@
                                             url('./img/cseb.png') no-repeat right 8px center;
                                             background-size: 24px;
                                             background-color: #D9DFE0;
-                                            border: 3px solid #4082f2;">
+                                            border: 3px solid #f23737;">
                                     </div>
 
                                     <div class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5">
@@ -138,7 +138,7 @@
                                             <button onClick="doStake()"
                                                 class="stake-btn button stake-button w-24 shadow-md inline-block mr-1 mb-2 bg-theme-1 text-white inline-flex items-center"
                                                 style="transition: all 0.20s ease-in-out;
-                                                box-shadow: 0 3px 6px rgba(0, 0, 0, .3), inset 0 0 10px 3px rgba(0, 0, 0, .2), 0 3px 20px rgb(64 130 242 / 0.5), 0 3px 35px rgb(64 130 242 / 0.48);  width: 94%;
+                                                box-shadow: 0 3px 6px rgba(0, 0, 0, .3), inset 0 0 10px 3px rgba(0, 0, 0, .2), 0 3px 20px rgb(242 55 55 / 0.5), 0 3px 35px rgb(242 55 55 / 0.48);  width: 94%;
                                             height: 37px;width: 90%;margin: 0;color: #fff9f885;font-size: 20px;">
                                                 <span class="btn-usertransfer-txt" style="text-align: center;margin: 0px auto;color: #eff3f6;">
                                                     STAKE
@@ -159,17 +159,17 @@
                                         
 										<div class="text-center rounded-md w-20 py-3">
                                             <div class="margin: 0px auto;" 
-												style="margin: 0px auto; width: 15vw; color: #051242; text-align: center;">Start On Day</div>
+												style="margin: 0px auto; width: 15vw; color: #000002; text-align: center;">Start On Day</div>
                                             <div class="font-semibold text-theme-1 text-lg st-val-1"
-                                                style="margin: 0px auto; width: 15vw; color: #051242; text-align: center;">--</div>
+                                                style="margin: 0px auto; width: 15vw; color: #000002; text-align: center;">--</div>
                                         </div>
                                        
 										<div class="text-center rounded-md w-20 py-3"
 											style="margin: 0px auto;">
                                             <div class="text-gray-600" 
-												style="width: 15vw; border-left: 2px solid #27273d57;color: #051242; text-align: center;">Collect On Day</div>
+												style="width: 15vw; border-left: 2px solid #27273d57;color: #000002; text-align: center;">Collect On Day</div>
                                             <div class="font-semibold text-theme-1 text-lg st-val-2"
-                                                style="width: 15vw; border-left: 2px solid #27273d57;color: #051242; text-align: center;">--</div>
+                                                style="width: 15vw; border-left: 2px solid #27273d57;color: #000002; text-align: center;">--</div>
                                         </div>
                                     </div>
 
@@ -190,7 +190,7 @@
 						<div class="box-header flex items-center p-5"
 							style="padding-top: 7px;padding-bottom: 7px;padding-right: 8px;">
 						
-						<h2 class="font-medium text-base mr-auto" style="color: #4082f2; font-weight: 900;">
+						<h2 class="font-medium text-base mr-auto" style="color: #f23737; font-weight: 900;">
 							Stake Bonus Info
 						</h2>
 
@@ -198,7 +198,7 @@
 							style="padding: 5px;">
 							<div href="javascript:;" class="bounty-days-el tooltip text-gray-600"
 								title="Increase your stake length for more BonusDays!"
-								style=" padding: 3px 8px; font-weight: 600; color: #4082f2;">Eligible for 0 BonusDays</div>
+								style=" padding: 3px 8px; font-weight: 600; color: #f23737;">Eligible for 0 BonusDays</div>
 						</button>
 					</div>
 					<div class="p-5 csne-gray-background">
@@ -208,17 +208,17 @@
 							<div class="bonus-div-1 flex flex-1"
 								style="width: 10vw; margin: 0px auto;">
 								
-								<div class="ml-5" style="color: #051242;">
+								<div class="ml-5" style="color: #000002;">
 									<div class="text-gray-600" 
-										style="font-weight: 600;color: #051242;">Time Bonus:</div>
+										style="font-weight: 600;color: #000002;">Time Bonus:</div>
 									<div class="text-gray-600" 
-										style="font-weight: 600;color: #051242;">Value Bonus:</div>
+										style="font-weight: 600;color: #000002;">Value Bonus:</div>
 								</div>
-								<div class="ml-5" style="color: #051242;">
+								<div class="ml-5" style="color: #000002;">
 									<div class="text-gray-600 st-val-5" 
-										style="text-align: left; color: #051242;">+ 0.000 CSE</div>
+										style="text-align: left; color: #000002;">+ 0.000 CSE</div>
 									<div class="text-gray-600 st-val-4" 
-										style="text-align: left; color: #051242;">+ 0.000 CSE</div>
+										style="text-align: left; color: #000002;">+ 0.000 CSE</div>
 								</div>
 								
 							</div>
@@ -226,17 +226,17 @@
 							<div class="bonus-div-2 flex flex-1"
 								style="width: 10vw; margin: 0px auto;">
 								
-								<div class="ml-5" style="color: #051242;">
+								<div class="ml-5" style="color: #000002;">
 									<div class="text-gray-600" 
-										style="color: #051242;">Total:</div>
+										style="color: #000002;">Total:</div>
 									<div class="text-gray-600" 
-										style="color: #051242;">Effective CSE:</div>
+										style="color: #000002;">Effective CSE:</div>
 								</div>
-								<div class="ml-5" style="color: #051242;">
+								<div class="ml-5" style="color: #000002;">
 									<div class="text-gray-600 st-val-6" 
-										style="text-align: left; color: #051242;">0.000 CSE</div>
+										style="text-align: left; color: #000002;">0.000 CSE</div>
 									<div class="text-gray-600 st-val-7" 
-										style="text-align: left; color: #051242;">0.000 CSE</div>
+										style="text-align: left; color: #000002;">0.000 CSE</div>
 								</div>
 								
 							</div>
@@ -245,24 +245,24 @@
 								style="width: 25vw; margin: 0px auto;border-left: 3px solid #27273d57;">
 								<div class="ml-5" style="">
 									<div class="text-gray-600" 
-										style="margin: 0px auto;font-weight: 600; color: #051242;">BNB in Today's Div Pool:</div>
+										style="margin: 0px auto;font-weight: 600; color: #000002;">BNB in Today's Div Pool:</div>
 									<div class="text-gray-600" 
-										style="margin: 0px auto;font-weight: 600; color: #051242;">4-Day Average:</div>
+										style="margin: 0px auto;font-weight: 600; color: #000002;">4-Day Average:</div>
 									<div class="text-gray-600"
-										style="margin: 10px auto;font-weight: 600; color: #051242; font-size: 18px;">Jackpot Balance:</div>Pays in:<div id="countbox"></div>
+										style="margin: 10px auto;font-weight: 600; color: #000002; font-size: 18px;">Jackpot Balance:</div>Pays in:<div id="countbox"></div>
 								</div>
 								<div class="ml-5" style="">
 									<div class="text-gray-600 st-val-8"
-										style="font-weight: 600;color: #051242; text-shadow: 0px 0px 8px #4082f2; color: #051242;">..BNB</div>
+										style="font-weight: 600;color: #000002; text-shadow: 0px 0px 8px #f23737; color: #000002;">..BNB</div>
 									<div class="text-gray-600 st-val-9" 
-										style="font-weight: 500; color: #051242;">..BNB</div>
+										style="font-weight: 500; color: #000002;">..BNB</div>
 									<div class="text-gray-600 jpb" 
-										style="margin: 10px auto;font-weight: 600; color: #051242; text-shadow: 0px 0px 8px #4082f2; color: #051242; font-size: 18px;">..BNB</div>
+										style="margin: 10px auto;font-weight: 600; color: #000002; text-shadow: 0px 0px 8px #f23737; color: #000002; font-size: 18px;">..BNB</div>
 								</div>
 							</div>
 							
 						</div>
-						<div class="text-gray-600" style="text-align: center; color: #051242;">Jackpot is a way stakers will be rewarded for staking. Yes while longer pays better, we also have incentivized you doing what you do best, HODLing.</br>Every day for 21 days the Jackpot will fill up with 10% from each auction lobby entry and then be distributed equally to all current stake holders at the end of that 21 day period.</br>So develop strategies to always have stakes in on the jackpot day 😉 and you will benefit.</div>
+						<div class="text-gray-600" style="text-align: center; color: #000002;">Jackpot is a way stakers will be rewarded for staking. Yes while longer pays better, we also have incentivized you doing what you do best, HODLing.</br>Every day for 21 days the Jackpot will fill up with 10% from each auction lobby entry and then be distributed equally to all current stake holders at the end of that 21 day period.</br>So develop strategies to always have stakes in on the jackpot day 😉 and you will benefit.</div>
 					</div>
 				</div>
 
@@ -274,12 +274,12 @@
 						<div class="box-header flex items-center p-5 border-b border-gray-200"
 							style="padding-top: 7px;padding-bottom: 7px;padding-right: 8px;">
 					
-						<h2 class="font-medium text-base mr-auto" style="color: #4082f2; font-weight: 900; text-align:center;margin: 0px auto;">
+						<h2 class="font-medium text-base mr-auto" style="color: #f23737; font-weight: 900; text-align:center;margin: 0px auto;">
 							My Active Stakes
 						</h2>
 
 						<button class="button w-24 mr-1 mb-2 bg-gray-200 corner-info" 
-							style="color: #4082f2"
+							style="color: #f23737"
 							style="padding: 5px;"
 							onClick="refreshMyStakes()">
 							<i data-feather="refresh-ccw" class="mx-auto"></i>
@@ -298,53 +298,53 @@
 									
 									<!------------------------mobile----------------------->
 									<div class="w-64 sm:w-auto truncate mobile-stake-resize"
-										style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 50vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="stake-headers inbox__item--highlight" style="text-align: center;">Start</span>
 									</div>
 
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 50vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">End</span>
 									</div>
 									
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 150vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 150vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Progress</span>
 									</div>
 									<!-----------------------endmobile--------------------->
 
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 90vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 90vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Staked</span>
 									</div>
 									
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 110vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 110vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Shares</span>
 									</div>
 
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 125vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 125vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Bonus</span>
 									</div>
 									
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 125vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 125vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">BNB Divs</span>
 									</div>
 
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 100vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 100vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Interest</span>
 									</div>
 
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 100vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 100vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Current Value</span>
 									</div>
 
 									<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-										style="width: 100vw; text-align:center; font-weight: 900; color: #051242;">
+										style="width: 100vw; text-align:center; font-weight: 900; color: #000002;">
 										<span class="inbox__item--highlight" style="text-align: center;">Action</span>
 									</div>
 
@@ -352,7 +352,7 @@
 								<div class="my-stakes-list overflow-x-auto sm:overflow-x-visible sm:overflow-y-visible"
 									style="background-color: transparent;">
 									<div class="intro-y csne-gray-background" style="text-align: center;">
-										<span class="active-stake-loading" style="font-weight: 900;font-size: 22px; color: #051242;">Loading...</span>
+										<span class="active-stake-loading" style="font-weight: 900;font-size: 22px; color: #000002;">Loading...</span>
 									</div>
 								</div>
 								
@@ -368,11 +368,11 @@
 						<div class="box-header flex items-center p-5 border-b border-gray-200"
 							style="padding-top: 7px;padding-bottom: 7px;padding-right: 8px;">
 						
-						<h2 class="font-medium text-base mr-auto" style="color: #4082f2; font-weight: 900; text-align: center;margin: 0px auto;">
+						<h2 class="font-medium text-base mr-auto" style="color: #f23737; font-weight: 900; text-align: center;margin: 0px auto;">
 							My Ended Stakes
 						</h2>
 						<button class="button w-24 mr-1 mb-2 bg-gray-200 corner-info"
-							style="color: #4082f2"
+							style="color: #f23737"
 							style="padding: 5px;"
 							onClick="refreshMyEndedStakes()">
 							<i data-feather="refresh-ccw" class="mx-auto"></i>
@@ -388,42 +388,42 @@
 								style="padding: 1px; padding-left: 5px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
 
 								<div class="w-64 sm:w-auto truncate mobile-stake-resize"
-									style="width: 50vw; text-align:center; font-weight: 900; color: #051242;">
+									style="width: 50vw; text-align:center; font-weight: 900; color: #000002;">
 									<span class="ended-stake-header mobile-stake-resize inbox__item--highlight" style="text-align: center;">Start</span>
 								</div>
 
 								<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-									style="width: 50vw; text-align:center; font-weight: 900; color: #051242; padding-left: 0.5rem;">
+									style="width: 50vw; text-align:center; font-weight: 900; color: #000002; padding-left: 0.5rem;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">End</span>
 								</div>
 
 								<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-									style="width: 70vw; text-align:center; font-weight: 900; color: #051242; padding-left: 1.5rem;">
+									style="width: 70vw; text-align:center; font-weight: 900; color: #000002; padding-left: 1.5rem;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">Progress</span>
 								</div>
 
 								<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-									style="width: 150vw; text-align:center; font-weight: 900; color: #051242; padding-left: 1.5rem;">
+									style="width: 150vw; text-align:center; font-weight: 900; color: #000002; padding-left: 1.5rem;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">Staked Amount</span>
 								</div>
 								<!--
 								<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-									style="width: 80vw; text-align:center; font-weight: 900; color: #051242;">
+									style="width: 80vw; text-align:center; font-weight: 900; color: #000002;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">Shares</span>
 								</div>-->
 
 								<div class="w-64 sm:w-auto truncate mobile-stake-resize"
-									style="width: 150vw; text-align:center; font-weight: 900; color: #051242;">
+									style="width: 150vw; text-align:center; font-weight: 900; color: #000002;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">BNB Divs</span>
 								</div>
 								<!--
 								<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-									style="width: 100vw; text-align:center; font-weight: 900; color: #051242;">
+									style="width: 100vw; text-align:center; font-weight: 900; color: #000002;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">Dividends</span>
 								</div>-->
 
 								<div class="w-64 sm:w-auto truncate mobile-stake-hide"
-									style="width: 100vw; text-align:center; font-weight: 900; color: #051242; padding-right: 6rem;">
+									style="width: 100vw; text-align:center; font-weight: 900; color: #000002; padding-right: 6rem;">
 									<span class="mobile-stake-hide inbox__item--highlight" style="text-align: center;">CSE Returned</span>
 								</div>
 
@@ -431,7 +431,7 @@
 							<div class="stake-info my-ended-stakes-list overflow-x-auto sm:overflow-x-visible sm:overflow-y-visible"
 								style="background-color: transparent;">
 								<div class="intro-y csne-gray-background" style="text-align: center;">
-									<span class="ended-stake-loading" style="font-weight: 900;font-size: 22px; color: #051242;"></span>
+									<span class="ended-stake-loading" style="font-weight: 900;font-size: 22px; color: #000002;"></span>
 								</div>
 							</div>
 							</div>

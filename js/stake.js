@@ -87,7 +87,7 @@ function stakeChangeDays() {
 
     const stakeDays = stakeData.entered_days + currentDay
     $('.st-val-2')[0].innerHTML = stakeDays + 1
-    $('.st-val-2')[0].style.color = "#051242"
+    $('.st-val-2')[0].style.color = "#000002"
 
     let extraDays = stakeData.entered_days - 1
     if (extraDays > LPB_MAX_DAYS) extraDays = LPB_MAX_DAYS
