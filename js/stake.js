@@ -495,9 +495,9 @@ function getMyEndedStakes() {
 	i = 0
 }
 
-function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payout, stakeReturn) {
+function renderMyEndedStakes(lockedDay, stakedDays, stakedSuns, dividends, payout, stakeReturn) {
 
-        let endDay = lockedDay + servedDays
+        let endDay = lockedDay + stakedDays
 
         let progress = "Canceled"
         if (endDay < currentDay)
@@ -529,7 +529,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-2"
                         style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
-                        <span class="inbox__item--highlight">${"#stakedDays"}</span>
+                        <span class="inbox__item--highlight">${stakedDays}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-3"
