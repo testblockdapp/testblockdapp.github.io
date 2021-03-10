@@ -119,7 +119,7 @@ function updateHeadAddress() {
     $('.my-acc-add')[1].innerHTML = user.address.slice(0, 5) + "..." + p2
 
 }
-jackPotBalance()
+
 function contractLoaded() {
     if (!user.address) return
 
@@ -129,6 +129,8 @@ function contractLoaded() {
     }, 1000 * 6)
 
     getCurrentDay()
+    getJackpotBalance()
+
 
     let intso = setInterval(() => {
         if (currentDay) {
@@ -151,6 +153,16 @@ function getCurrentDay() {
     setTimeout(() => {
         getCurrentDay()
     }, 1000 * 60 * 7)
+}
+
+function getJackpotBalance() {
+    mainContract.methods.jackPotValue().call( {
+        shouldPollResponse: true
+    }).then(res => {
+            var balance = parseInt(res) / 1000000000000000000;
+             console.log(balance+" "+"BNB");
+             $('.jpb')[0].innerHTML = balance + " " + "BNB";
+           });
 }
 
 // get balance of user and set it on the header
@@ -356,13 +368,3 @@ function rewardTimer() {
         $('.day-end-in')[1].innerHTML = `Day Ends In: ${hours} : ${minutes} : ${seconds}`
     }
 }
-async function jackPotBalance() {
-	let contract = web3.eth.contract(abi).at(contractAddress);
-	console.log(web3.eth);
-   await contract.jackPotValue.call((err,res)=>{
-	 var balance=web3._extend.utils.fromWei(parseInt(res),'BNB');
-	  console.log(balance+" "+"BNB");
-	  console.log(err);
-	  $('.jpb')[0].innerHTML = balance + " " + "BNB";
-	});
-  }
