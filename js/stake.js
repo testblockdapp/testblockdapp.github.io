@@ -549,7 +549,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-6"
                         style="width: 125vw; text-align:center; font-weight: 900;color: #85B6FF; padding-right: 2rem;">
-                        <span class="inbox__item--highlight">${abbreviate_number(stakeReturn - (stakeReturn*(25/100)) / DESI, 2 )} CSE</span>
+                        <span class="inbox__item--highlight">${abbreviate_number(stakeReturn*(25/100)) / DESI, 2 )} CSE</span>
                     </div>
 
                 </div>
