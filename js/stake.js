@@ -499,7 +499,7 @@ function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payou
 
         let endDay = lockedDay + servedDays
 
-        let progress = "Canceled"
+        let progress = "Done"
         if (endDay < currentDay)
 			if(stakeReturn < payout + stakedSuns)
 				progress = "Partial"
