@@ -134,9 +134,9 @@ function calculator() {
 }
 
 setInterval(() => {
-	if(parseInt($('.stake-inp-day')[0].value) > 60){
-		$('.stake-inp-day')[0].value = 60
-        alert("Max Stake Days: 60")
+	if(parseInt($('.stake-inp-day')[0].value) > 365){
+		$('.stake-inp-day')[0].value = 365
+        alert("Max Stake Days: 365")
         stakeChangeDays();
 		return
 	}
@@ -289,44 +289,44 @@ function renderMyStakes(data) {
                     style="padding-left: .0rem; padding-right: .0rem; color: #005af2;">
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${item.lockedDay}</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${item.lockedDay + item.stakedDays}</span>
                     </div>
     
                     ${progress}
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 90vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 90vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)}</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 110vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 110vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakeShares) / DESI, 2)}</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 125vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 125vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="daily-bonus-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 125vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 125vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="dividends-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 100vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 100vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="interest-tn-${ii} inbox__item--highlight">--</span>
                     </div>
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 100vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 100vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="interest-tm-${ii} inbox__item--highlight" id="${parseInt(stakedSuns) / DESI}">--</span>
                     </div>
     
@@ -459,7 +459,7 @@ function endStake(stakeId) {
         }).then(res => {
             refreshMyStakes()
             setTimeout(() => {
-                  refreshMyEndedStakes()
+                //  refreshMyEndedStakes()
             }, 1500)
         })
     }
@@ -480,7 +480,7 @@ function getMyEndedStakes() {
 			renderMyEndedStakes
 			(
 				events[i].returnValues.lockedDay,
-				events[i].returnValues.stakedDays,
+				events[i].returnValues.servedDays,
 				events[i].returnValues.stakedSuns,
 				events[i].returnValues.dividends,
 				events[i].returnValues.payout,
@@ -495,14 +495,17 @@ function getMyEndedStakes() {
 	i = 0
 }
 
-function renderMyEndedStakes(lockedDay, stakedDays, stakedSuns, dividends, payout, stakeReturn) {
+function renderMyEndedStakes(lockedDay, servedDays, stakedSuns, dividends, payout, stakeReturn) {
 
-        let endDay = lockedDay + stakedDays
+        
+        
+        let endDay = parseInt(servedDays) + parseInt(lockedDay);
 
-        let progress = "Canceled"
+
+        let progress = "Finished"
         if (endDay < currentDay)
-			if(stakeReturn < payout + stakedSuns)
-				progress = "Partial"
+			if(parseInt(stakeReturn*(75/100)) < parseInt(payout) + parseInt(stakedSuns))
+				progress = "Cancelled"
 			else
 				progress = "Finished"
 
@@ -523,32 +526,32 @@ function renderMyEndedStakes(lockedDay, stakedDays, stakedSuns, dividends, payou
 					style="padding-left: .0rem; padding-right: .0rem; color: #005af2;">
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-1"
-                        style="width: 45vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 45vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span class="inbox__item--highlight">${lockedDay}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-2"
-                        style="width: 50vw; text-align:center; font-weight: 900; color: #F23737;">
-                        <span class="inbox__item--highlight">${stakedDays}</span>
+                        style="width: 50vw; text-align:center; font-weight: 900; color: #85B6FF;">
+                        <span class="inbox__item--highlight">${endDay}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-3"
-                        style="width: 70vw; text-align:center; font-weight: 900;  color: #F23737;">
+                        style="width: 70vw; text-align:center; font-weight: 900;  color: #85B6FF;">
                         <span class="inbox__item--highlight">${progress}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-4"
-                        style="width: 140vw; text-align:center; font-weight: 900;color: #F23737;">
+                        style="width: 140vw; text-align:center; font-weight: 900;color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)} CSE</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-5"
-                        style="width: 100vw; text-align:center; font-weight: 900;color: #F23737;">
+                        style="width: 100vw; text-align:center; font-weight: 900;color: #85B6FF;">
                         <span class="inbox__item--highlight">${abbreviate_number(dividends / 10e17, 6)} BNB</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate ended-stake-info-6"
-                        style="width: 125vw; text-align:center; font-weight: 900;color: #F23737; padding-right: 2rem;">
+                        style="width: 125vw; text-align:center; font-weight: 900;color: #85B6FF; padding-right: 2rem;">
                         <span class="inbox__item--highlight">${abbreviate_number(stakeReturn*(75/100) / DESI, 2 )} CSE</span>
                     </div>
 
@@ -656,22 +659,22 @@ function renderMyStakesMobile(data) {
             `
         <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #F23737; ">
+                style="cursor: auto; color: #85B6FF; ">
                 <div class="flex px-5 py-3"
-                    style="padding-left: .0rem; padding-right: .0rem; color: #F23737;">
+                    style="padding-left: .0rem; padding-right: .0rem; color: #85B6FF;">
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span style="font-size: 8px;"class="inbox__item--highlight">${item.lockedDay + item.stakedDays+1}</span>
                     </div>
         
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span style="font-size: 8px;"class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #F23737;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span style="font-size: 8px;"class="dividends-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
     
