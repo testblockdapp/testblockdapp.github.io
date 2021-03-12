@@ -459,7 +459,7 @@ function endStake(stakeId) {
         }).then(res => {
             refreshMyStakes()
             setTimeout(() => {
-                //  refreshMyEndedStakes()
+                  refreshMyEndedStakes()
             }, 1500)
         })
     }
@@ -480,7 +480,7 @@ function getMyEndedStakes() {
 			renderMyEndedStakes
 			(
 				events[i].returnValues.lockedDay,
-				events[i].returnValues.servedDays,
+				events[i].returnValues.stakedDays,
 				events[i].returnValues.stakedSuns,
 				events[i].returnValues.dividends,
 				events[i].returnValues.payout,
